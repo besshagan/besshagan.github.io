@@ -12,8 +12,8 @@ body {
 
 .content {
   background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 6px;
+  padding: 3rem;
+  border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
 
