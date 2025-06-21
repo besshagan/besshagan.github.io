@@ -103,6 +103,7 @@ ul {
   border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 2rem;
+  margin-top: 0;
   margin-bottom: 2.5rem;
   box-shadow: 0 2px 8px var(--shadow);
 }
