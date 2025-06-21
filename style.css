@@ -13,8 +13,13 @@ h1 {
   font-weight: 600;
 }
 
-section, h2 {
+section {
   margin-top: 2rem;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  color: #3949ab;
 }
 
 h3 {
