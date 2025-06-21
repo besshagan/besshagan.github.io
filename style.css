@@ -1,3 +1,14 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  line-height: 1.6;
+  background-color: #f2ebff;
+  color: #212121;
+}
+
 .site-header h1,
 .site-header p {
   text-align: center;
