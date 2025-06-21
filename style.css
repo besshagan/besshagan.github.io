@@ -128,6 +128,8 @@ ul {
   box-shadow: 0 2px 8px var(--shadow);
 }
 
+.about p,
+.contact p,
 .project-card p {
   margin: 0.5rem 0;
 }
