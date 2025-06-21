@@ -9,14 +9,9 @@ body {
   color: #212121;
 }
 
-h1, p:first-of-type {
+.site-header {
   text-align: center;
-}
-
-p:first-of-type {
-  font-size: 1.1rem;
-  color: #555;
-  margin-top: -0.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Headers */
