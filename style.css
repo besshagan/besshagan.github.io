@@ -1,27 +1,18 @@
-/* ===================================================== */
-/*                  THEME VARIABLES                      */
-/* ===================================================== */
-/* Easy to update your whole site by changing these */
-
 :root {
-  --bg-light: #f2ebff;            /* Light lavender background */
-  --text-main: #212121;           /* Dark gray text */
+  --bg-light: #f2ebff;
+  --text-main: #212121;
 
-  --blue-dark: #1a237e;           /* h1 heading color */
-  --blue-mid: #3949ab;            /* h2 heading color */
-  --blue-accent: #3f51b5;         /* h3 heading color */
+  --blue-dark: #1a237e;
+  --blue-mid: #3949ab;
+  --blue-accent: #3f51b5;
 
-  --teal: #00796b;                /* Link and button color */
-  --teal-dark: #004d40;           /* Hover color for links/buttons */
+  --teal: #00796b;
+  --teal-dark: #004d40;
 
-  --card-bg: #ffffff;             /* White background for content boxes */
-  --card-border: #ddd;            /* Light gray borders */
-  --shadow: rgba(0, 0, 0, 0.04);  /* Subtle box shadows */
+  --card-bg: #ffffff;
+  --card-border: #ddd;
+  --shadow: rgba(0, 0, 0, 0.04);
 }
-
-/* ===================================================== */
-/*                  BASE STYLES                          */
-/* ===================================================== */
 
 * {
   box-sizing: border-box;
@@ -39,7 +30,6 @@ body {
   color: var(--text-main);
 }
 
-/* Responsive tweaks for small screens */
 @media (max-width: 600px) {
   body {
     padding: 0 1rem;
@@ -61,10 +51,6 @@ body {
   }
 }
 
-/* ===================================================== */
-/*                  HEADER STYLES                        */
-/* ===================================================== */
-
 .site-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -83,10 +69,6 @@ body {
   color: var(--blue-accent);
 }
 
-/* ===================================================== */
-/*               HEADING STYLES                          */
-/* ===================================================== */
-
 h1 {
   font-size: 2.2rem;
   font-weight: 700;
@@ -100,18 +82,15 @@ h2 {
   color: var(--blue-mid);
   border-bottom: 2px solid #e0e0e0;
   padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.25rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--blue-accent);
-  margin-bottom: 0.2rem;
 }
-
-/* ===================================================== */
-/*               LINKS & LISTS                           */
-/* ===================================================== */
 
 a {
   color: var(--teal);
@@ -129,38 +108,16 @@ ul {
   padding-left: 1.2rem;
 }
 
-/* ===================================================== */
-/*            ABOUT SECTION                              */
-/* ===================================================== */
-
-.about {
+/* === Cards (About, Projects, Contact) === */
+.about,
+.contact {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 3px 12px var(--shadow);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px var(--shadow);
 }
-
-.about:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-.about ul {
-  margin-top: 1rem;
-  padding-left: 1.5rem;
-}
-
-.about a {
-  font-weight: bold;
-  color: var(--teal);
-}
-
-/* ===================================================== */
-/*            PROJECT CARD SECTION                       */
-/* ===================================================== */
 
 .project-card {
   background-color: var(--card-bg);
@@ -168,20 +125,14 @@ ul {
   border-radius: 10px;
   padding: 1.25rem;
   margin: 1.5rem 0;
-  box-shadow: 0 2px 12px var(--shadow);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.project-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
+  box-shadow: 0 2px 8px var(--shadow);
 }
 
 .project-card p {
   margin: 0.5rem 0;
 }
 
-/* Use this class for any "Visit Repo" or "Read More" links */
+/* === Buttons / Links in Cards === */
 .project-card a,
 .button {
   display: inline-block;
@@ -201,40 +152,21 @@ ul {
   background-color: var(--teal-dark);
 }
 
-/* ===================================================== */
-/*            CONTACT SECTION                            */
-/* ===================================================== */
-
-.contact {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-top: 2.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.contact:hover {
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  transform: translateY(-1px);
-}
-
+.about ul,
 .contact ul {
   list-style: none;
   padding-left: 0;
+  margin-top: 1rem;
 }
 
+.about li,
 .contact li {
   margin: 0.5rem 0;
   font-size: 1rem;
 }
 
-.contact a {
-  color: var(--teal);
-  font-weight: 500;
-}
-
-.contact a:hover {
-  color: var(--teal-dark);
+.about h2,
+.contact h2,
+.project-card h3 {
+  margin-top: 0;
 }
