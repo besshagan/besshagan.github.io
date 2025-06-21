@@ -10,7 +10,7 @@
 - **MarioDiffusion** (SURF 2025): Procedural content generation with diffusion models and Transformers  
 - **Evergrove** (Capstone): Educational game in Godot to teach data science  
 - **INVITE Institute** (DREU 2024):  
-  [View my DREU research & report here ➜](https://besshagan.github.io/dreu-2024/)
+  [View my DREU research & report here ➜](https://besshagan.github.io/dreu-2024/files/finalreport.pdf)
 
 ---
 
