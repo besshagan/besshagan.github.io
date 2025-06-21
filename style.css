@@ -129,6 +129,7 @@ ul {
 }
 
 .about p,
+.contact p,
 .project-card p {
   margin: 0.5rem 0;
 }
@@ -164,6 +165,12 @@ ul {
 .contact li {
   margin: 0.5rem 0;
   font-size: 1rem;
+}
+
+.contact li a {
+  display: inline;
+  margin: 0;
+  line-height: 1.6;
 }
 
 .about h2,
