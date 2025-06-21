@@ -121,10 +121,6 @@ ul {
   margin: 2rem 0;
 }
 
-.project-card h3 {
-  margin-top: 0; /* Prevent duplicate spacing */
-}
-
 /* === Paragraphs inside Cards === */
 .about p,
 .contact p,
