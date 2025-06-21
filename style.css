@@ -1,3 +1,4 @@
+/* === CSS Variables === */
 :root {
   --bg-light: #f2ebff;
   --text-main: #212121;
@@ -14,22 +15,158 @@
   --shadow: rgba(0, 0, 0, 0.04);
 }
 
+/* === Reset + Box Sizing === */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* === Global Body Styles === */
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
-  line-height: 1.6;
+  margin: 3rem auto; /* More breathing room */
+  padding: 0 2rem;
+  line-height: 1.7; /* Slightly taller for easy reading */
   background-color: var(--bg-light);
   color: var(--text-main);
 }
 
+/* === Typography: Headings === */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--blue-mid);
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--blue-accent);
+}
+
+/* === Links === */
+a {
+  color: var(--teal);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--teal-dark);
+  text-decoration: underline;
+}
+
+/* === Lists === */
+ul {
+  padding-left: 1.2rem;
+}
+
+/* === Header === */
+.site-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.site-header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.5rem;
+}
+
+.site-header p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--blue-accent);
+  margin-top: 0.25rem;
+}
+
+/* === Reusable Card Styles === */
+.about,
+.contact,
+.project-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* === Project Card Specific === */
+.project-card {
+  border-radius: 10px; /* Slightly tighter */
+  padding: 1.75rem;
+  margin: 2rem 0;
+}
+
+.project-card h3 {
+  margin-top: 0; /* Prevent duplicate spacing */
+}
+
+/* === Paragraphs inside Cards === */
+.about p,
+.contact p,
+.project-card p {
+  margin: 0.75rem 0;
+}
+
+/* === Buttons and Card Links === */
+.project-card a,
+.button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  background-color: var(--teal);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.project-card a:hover,
+.button:hover {
+  background-color: var(--teal-dark);
+}
+
+/* === Lists inside About & Contact Cards === */
+.about ul,
+.contact ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.25rem;
+}
+
+.about li,
+.contact li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact li a {
+  display: inline;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* === Small Screens (Mobile) === */
 @media (max-width: 600px) {
   body {
     padding: 0 1rem;
@@ -47,134 +184,10 @@ body {
   .project-card,
   .about,
   .contact {
-    padding: 1rem;
+    padding: 1.25rem;
   }
-}
 
-.site-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.site-header h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--blue-dark);
-  margin-bottom: 0.5rem;
-}
-
-.site-header p {
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--blue-accent);
-}
-
-h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--blue-dark);
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: 1.6rem;
-  margin-top: 2.5rem;
-  color: var(--blue-mid);
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 0.25rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  color: var(--blue-accent);
-}
-
-a {
-  color: var(--teal);
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: var(--teal-dark);
-  text-decoration: underline;
-}
-
-ul {
-  padding-left: 1.2rem;
-}
-
-/* === Cards (About, Projects, Contact) === */
-.about,
-.contact {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 2.5rem;
-  box-shadow: 0 2px 8px var(--shadow);
-}
-
-.project-card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 10px;
-  padding: 1.25rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 2px 8px var(--shadow);
-}
-
-.about p,
-.contact p,
-.project-card p {
-  margin: 0.5rem 0;
-}
-
-/* === Buttons / Links in Cards === */
-.project-card a,
-.button {
-  display: inline-block;
-  margin-top: 0.5rem;
-  background-color: var(--teal);
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-.project-card a:hover,
-.button:hover {
-  background-color: var(--teal-dark);
-}
-
-.about ul,
-.contact ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 1rem;
-}
-
-.about li,
-.contact li {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-}
-
-.contact li a {
-  display: inline;
-  margin: 0;
-  line-height: 1.6;
-}
-
-.about h2,
-.contact h2,
-.project-card h3 {
-  margin-top: 0;
+  .site-header {
+    margin-bottom: 2rem;
+  }
 }
