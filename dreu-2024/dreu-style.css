@@ -15,6 +15,18 @@ body {
   text-align: center;
 }
 
+.entry p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.site-header p {
+  color: #5e35b1;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
 .site-header {
   margin-bottom: 2rem;
 }
