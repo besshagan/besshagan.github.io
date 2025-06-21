@@ -1,17 +1,24 @@
-# Bess Hagan
+# Bess Hagan 🎓💻
 
-🎓 Computer Science undergraduate | Data Enthusiast | AI Researcher  
-🔍 Exploring machine learning, LLMs, GIS, and game-based learning.
+This is my personal portfolio site built with HTML and CSS to showcase my academic background, technical skills, and research experience in computer science, data science, and AI.
 
 ---
 
-## 🔬 Research Highlights
+## 🧠 About
 
-- **MarioDiffusion** (SURF 2025): Procedural content generation with diffusion models and Transformers  
-- **Evergrove** (Capstone): Educational game in Godot to teach data science  
-- **INVITE Institute** (DREU 2024):  
-  [View my DREU research & report here ➜](https://besshagan.github.io/dreu-2024/files/finalreport.pdf)
+The site highlights:
+- Academic and research experience (e.g., SURF & DREU)
+- Skills in data science, software development, and GIS
+- Projects in machine learning, procedural content generation, and more
+- A downloadable resume
 
+---
+
+## 🛠 Tech Stack
+
+- HTML5
+- CSS3 (no frameworks, just clean vanilla CSS)
+- Hosted via [GitHub Pages](https://pages.github.com/)
 ---
 
 ## 📬 Contact
