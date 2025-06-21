@@ -1,55 +1,115 @@
+/* === BASE LAYOUT === */
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #e5e5f7;
+  background-color: #f3e8fc; /* soft purple background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #212121;
-  max-width: 800px;
+  max-width: 850px;
   margin: 2rem auto;
-  padding: 1.5rem;
-  line-height: 1.7;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(50, 50, 93, 0.1);
+  padding: 0 1.5rem;
+  line-height: 1.6;
 }
 
-.content {
-  background-color: #ffffff;
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+/* === TYPOGRAPHY === */
+.site-header h1,
+.site-header p {
+  text-align: center;
 }
 
-h1, h2, h3 {
-  color: #3f51b5;
-  margin-top: 1.8rem;
-  border-bottom: 2px solid #c5cae9;
-  padding-bottom: 0.3rem;
+.site-header {
+  margin-bottom: 2rem;
 }
 
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #6a1b9a; /* bold purple */
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  color: #8e24aa; /* lighter purple */
+  border-bottom: 2px solid #e1bee7;
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  color: #5e35b1;
+  margin-bottom: 0.2rem;
+}
+
+/* === LINKS === */
 a {
-  color: #d81b60;
-  font-weight: bold;
+  color: #ab47bc;
+  font-weight: 500;
   text-decoration: none;
 }
-
 a:hover {
+  color: #6a1b9a;
   text-decoration: underline;
 }
 
+/* === LISTS === */
 ul {
-  margin-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
+/* === CONTENT BOXES === */
+.about, .contact, .entry, .project-card {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #ab47bc;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.project-card a:hover {
+  background-color: #6a1b9a;
+}
+
+.contact ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.contact a {
+  color: #ab47bc;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  color: #6a1b9a;
+}
+
+/* === SPECIAL BLOCKS === */
 blockquote {
-  border-left: 5px solid #d81b60;
+  border-left: 5px solid #ba68c8;
+  background-color: #f3e5f5;
+  padding: 0.75rem 1.25rem;
   margin: 1.5rem 0;
-  padding: 0.5rem 1rem;
-  background: #fff0f6;
   font-style: italic;
-  color: #444;
+  color: #4a148c;
 }
 
-hr {
-  border: 0;
-  height: 2px;
-  background: #c5cae9;
-  margin: 2rem 0;
+.entry h3 {
+  margin-top: 0;
 }
