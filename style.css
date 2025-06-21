@@ -1,35 +1,103 @@
-/* Base styles */
+/* ===================================================== */
+/*                  THEME VARIABLES                      */
+/* ===================================================== */
+/* Easy to update your whole site by changing these */
+
+:root {
+  --bg-light: #f2ebff;            /* Light lavender background */
+  --text-main: #212121;           /* Dark gray text */
+
+  --blue-dark: #1a237e;           /* h1 heading color */
+  --blue-mid: #3949ab;            /* h2 heading color */
+  --blue-accent: #3f51b5;         /* h3 heading color */
+
+  --teal: #00796b;                /* Link and button color */
+  --teal-dark: #004d40;           /* Hover color for links/buttons */
+
+  --card-bg: #ffffff;             /* White background for content boxes */
+  --card-border: #ddd;            /* Light gray borders */
+  --shadow: rgba(0, 0, 0, 0.04);  /* Subtle box shadows */
+}
+
+/* ===================================================== */
+/*                  BASE STYLES                          */
+/* ===================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 900px;
   margin: 2rem auto;
   padding: 0 1.5rem;
   line-height: 1.6;
-  background-color: #f2ebff;
-  color: #212121;
+  background-color: var(--bg-light);
+  color: var(--text-main);
 }
 
-.site-header h1,
-.site-header p {
-  text-align: center;
+/* Responsive tweaks for small screens */
+@media (max-width: 600px) {
+  body {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .project-card,
+  .about,
+  .contact {
+    padding: 1rem;
+  }
 }
+
+/* ===================================================== */
+/*                  HEADER STYLES                        */
+/* ===================================================== */
 
 .site-header {
+  text-align: center;
   margin-bottom: 2rem;
 }
 
-/* Headers */
+.site-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.5rem;
+}
+
+.site-header p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--blue-accent);
+}
+
+/* ===================================================== */
+/*               HEADING STYLES                          */
+/* ===================================================== */
+
 h1 {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #1a237e;
+  color: var(--blue-dark);
   margin-bottom: 0.5rem;
 }
 
 h2 {
   font-size: 1.6rem;
   margin-top: 2.5rem;
-  color: #3949ab;
+  color: var(--blue-mid);
   border-bottom: 2px solid #e0e0e0;
   padding-bottom: 0.25rem;
 }
@@ -37,18 +105,23 @@ h2 {
 h3 {
   font-size: 1.25rem;
   margin-top: 1.5rem;
-  color: #3f51b5;
+  color: var(--blue-accent);
   margin-bottom: 0.2rem;
 }
 
-/* Paragraphs and links */
+/* ===================================================== */
+/*               LINKS & LISTS                           */
+/* ===================================================== */
+
 a {
-  color: #00796b;
+  color: var(--teal);
   font-weight: 500;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
+
 a:hover {
-  color: #004d40;
+  color: var(--teal-dark);
   text-decoration: underline;
 }
 
@@ -56,56 +129,95 @@ ul {
   padding-left: 1.2rem;
 }
 
-/* About section */
+/* ===================================================== */
+/*            ABOUT SECTION                              */
+/* ===================================================== */
+
 .about {
-  background-color: #ffffff;
-  border: 1px solid #eee;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 3px 12px var(--shadow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
+
+.about:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
 .about ul {
   margin-top: 1rem;
   padding-left: 1.5rem;
 }
+
 .about a {
   font-weight: bold;
-  color: #00695c;
+  color: var(--teal);
 }
 
-/* Project cards */
+/* ===================================================== */
+/*            PROJECT CARD SECTION                       */
+/* ===================================================== */
+
 .project-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 10px;
   padding: 1.25rem;
   margin: 1.5rem 0;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
+
+.project-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
 .project-card p {
   margin: 0.5rem 0;
 }
-.project-card a {
+
+/* Use this class for any "Visit Repo" or "Read More" links */
+.project-card a,
+.button {
   display: inline-block;
   margin-top: 0.5rem;
-  background-color: #00796b;
+  background-color: var(--teal);
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 5px;
   font-size: 0.9rem;
-}
-.project-card a:hover {
-  background-color: #004d40;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 
+.project-card a:hover,
+.button:hover {
+  background-color: var(--teal-dark);
+}
+
+/* ===================================================== */
+/*            CONTACT SECTION                            */
+/* ===================================================== */
+
 .contact {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 10px;
   padding: 1.5rem;
   margin-top: 2.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.contact:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
 }
 
 .contact ul {
@@ -119,9 +231,10 @@ ul {
 }
 
 .contact a {
-  color: #00796b;
+  color: var(--teal);
   font-weight: 500;
 }
+
 .contact a:hover {
-  color: #004d40;
+  color: var(--teal-dark);
 }
