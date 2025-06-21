@@ -9,8 +9,12 @@ body {
   color: #212121;
 }
 
-.site-header {
+.site-header h1,
+.site-header p {
   text-align: center;
+}
+
+.site-header {
   margin-bottom: 2rem;
 }
 
