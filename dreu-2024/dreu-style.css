@@ -1,97 +1,122 @@
-/* === BASE LAYOUT === */
+/* ============================= */
+/*         GLOBAL SETTINGS       */
+/* ============================= */
+
+:root {
+  /* Define your core color palette here for easy reuse */
+  --bg-color: #f3e8fc;         /* Soft purple background */
+  --text-color: #212121;       /* Default text */
+  --primary: #6a1b9a;          /* Bold purple */
+  --secondary: #8e24aa;        /* Lighter purple */
+  --accent: #ab47bc;           /* Button & link purple */
+  --hover: #5e35b1;            /* Darker hover purple */
+  --border-light: #eee;        /* Light gray border */
+  --shadow-light: rgba(0, 0, 0, 0.04);
+  --highlight-bg: #f3e5f5;     /* Light purple blockquote */
+  --highlight-border: #ba68c8; /* Blockquote accent */
+}
+
+/* Apply base styles to everything */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================= */
+/*         BASE LAYOUT           */
+/* ============================= */
+
 body {
-  background-color: #f3e8fc; /* soft purple background */
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #212121;
+  line-height: 1.6;
   max-width: 850px;
   margin: 2rem auto;
   padding: 0 1.5rem;
-  line-height: 1.6;
 }
 
-/* === TYPOGRAPHY === */
-.site-header h1,
-.site-header p {
+/* Optional wrapper for mobile responsiveness if needed */
+@media (max-width: 600px) {
+  body {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================= */
+/*         TYPOGRAPHY            */
+/* ============================= */
+
+/* Main site header section */
+.site-header {
+  margin-bottom: 2rem;
   text-align: center;
 }
 
+.site-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.site-header p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--hover);
+  margin-top: 0.5rem;
+}
+
+/* Section headers */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--secondary);
+  border-bottom: 2px solid #e1bee7;
+  padding-bottom: 0.25rem;
+  margin: 2rem 0 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--hover);
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* Paragraph spacing */
 .entry p {
   margin-bottom: 1rem;
   font-size: 1rem;
 }
 
-.site-header p {
-  color: #5e35b1;
-  font-weight: 400;
-  font-size: 1rem;
-  margin-top: 0;
-}
+/* ============================= */
+/*            LINKS              */
+/* ============================= */
 
-.site-header {
-  margin-bottom: 2rem;
-}
-
-h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #6a1b9a; /* bold purple */
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: 1.6rem;
-  margin-top: 2.5rem;
-  color: #8e24aa; /* lighter purple */
-  border-bottom: 2px solid #e1bee7;
-  padding-bottom: 0.25rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-  margin-top: 1.5rem;
-  color: #5e35b1;
-  margin-bottom: 0.2rem;
-}
-
-/* === LINKS === */
 a {
-  color: #ab47bc;
+  color: var(--accent);
   font-weight: 500;
   text-decoration: none;
 }
+
 a:hover {
-  color: #6a1b9a;
+  color: var(--primary);
   text-decoration: underline;
 }
 
-/* === LISTS === */
+/* ============================= */
+/*             LISTS             */
+/* ============================= */
+
 ul {
   padding-left: 1.5rem;
-}
-
-/* === CONTENT BOXES === */
-.about, .contact, .entry, .project-card {
-  background-color: #ffffff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin: 2rem auto; /* center the white box visually */
-  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
-  max-width: 100%;
-}
-
-.project-card a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  background-color: #ab47bc;
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-}
-
-.project-card a:hover {
-  background-color: #6a1b9a;
 }
 
 .contact ul {
@@ -104,25 +129,65 @@ ul {
   font-size: 1rem;
 }
 
-.contact a {
-  color: #ab47bc;
-  font-weight: 500;
+/* ============================= */
+/*         CONTENT BOXES         */
+/* ============================= */
+
+/* Reusable white cards for about/contact/project blocks */
+.about,
+.contact,
+.entry,
+.project-card {
+  background-color: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  box-shadow: 0 3px 12px var(--shadow-light);
+  max-width: 100%;
 }
 
-.contact a:hover {
-  color: #6a1b9a;
+/* Project card link/button */
+.project-card a {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
 }
 
-/* === SPECIAL BLOCKS === */
+.project-card a:hover {
+  background-color: var(--primary);
+}
+
+/* ============================= */
+/*           BLOCKQUOTES         */
+/* ============================= */
+
 blockquote {
-  border-left: 5px solid #ba68c8;
-  background-color: #f3e5f5;
+  border-left: 5px solid var(--highlight-border);
+  background-color: var(--highlight-bg);
   padding: 0.75rem 1.25rem;
   margin: 1.5rem 0;
   font-style: italic;
   color: #4a148c;
 }
 
+/* Ensure entry headings sit flush */
 .entry h3 {
   margin-top: 0;
+}
+
+/* ============================= */
+/*           FOOTER              */
+/* ============================= */
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  color: #888;
 }
