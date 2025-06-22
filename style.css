@@ -211,7 +211,7 @@ ul {
 }
 
 .project-card a:hover,
-.button:not(.secondary):hover {
+.button:hover {
   background-color: var(--teal-dark);
 }
 
