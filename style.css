@@ -132,6 +132,24 @@ a:hover {
   background-color: var(--teal-dark);
 }
 
+.button-outline {
+  display: inline-block;
+  border: 2px solid var(--teal);
+  color: var(--teal);
+  background-color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.button-outline:hover {
+  background-color: var(--teal);
+  color: white;
+}
+
 /* ========================================================
    🧩 CONTENT COMPONENTS
    ======================================================== */
