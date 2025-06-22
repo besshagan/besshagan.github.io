@@ -15,10 +15,6 @@
   --shadow: rgba(0, 0, 0, 0.04);
 }
 
-body {
-  margin-top: 0;
-}
-
 /* === Hero Banner === */
 .hero-banner {
   background: linear-gradient(135deg, #e3f2fd, #bbdefb);
@@ -63,7 +59,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 1.5rem;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 /* === Reset + Box Sizing === */
