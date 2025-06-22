@@ -52,6 +52,18 @@
   background-color: var(--teal-dark);
 }
 
+.hero-content .button.secondary {
+  background-color: transparent;
+  color: var(--teal);
+  border: 2px solid var(--teal);
+  margin-left: 1rem;
+}
+
+.hero-content .button.secondary:hover {
+  background-color: var(--teal);
+  color: white;
+}
+
 /* === Reset + Box Sizing === */
 * {
   box-sizing: border-box;
