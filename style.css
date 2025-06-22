@@ -54,15 +54,21 @@
 }
 
 .hero-content .button.secondary {
-  background-color: transparent;
+  background-color: white;
   color: var(--teal);
   border: 2px solid var(--teal);
-  margin-left: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .hero-content .button.secondary:hover {
-  background-color: var(--teal);
-  color: white;
+  background-color: white;
+  color: var(--teal-dark);
+  border-color: var(--teal-dark);
 }
 
 .button-row {
