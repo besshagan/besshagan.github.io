@@ -15,6 +15,10 @@
   --shadow: rgba(0, 0, 0, 0.04);
 }
 
+body {
+  margin-top: 0;
+}
+
 /* === Hero Banner === */
 .hero-banner {
   background: linear-gradient(135deg, #e3f2fd, #bbdefb);
