@@ -222,6 +222,11 @@ a:hover {
   line-height: 1.6;
 }
 
+.about ul li,
+.contact ul li {
+  margin-bottom: 0.75em;
+}
+
 /* === Default list style === */
 ul {
   padding-left: 1.2rem;
