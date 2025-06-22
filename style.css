@@ -15,6 +15,43 @@
   --shadow: rgba(0, 0, 0, 0.04);
 }
 
+/* === Hero Banner === */
+.hero-banner {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--blue-dark);
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  color: var(--blue-accent);
+  margin-bottom: 1.5rem;
+}
+
+.hero-content .button {
+  background-color: var(--teal);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.hero-content .button:hover {
+  background-color: var(--teal-dark);
+}
+
 /* === Reset + Box Sizing === */
 * {
   box-sizing: border-box;
