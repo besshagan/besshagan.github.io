@@ -1,1 +1,67 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fafc;
+  color: #333;
+}
+
+.hero {
+  background: linear-gradient(135deg, #bbdefb, #e3f2fd);
+  text-align: center;
+  padding: 3rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.projects {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.project-card h2 {
+  margin-top: 0;
+  color: #1976d2;
+}
+
+.links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.links li {
+  margin: 0.5rem 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: #1565c0;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #0d47a1;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #e3f2fd;
+  font-size: 0.9rem;
+}
 
