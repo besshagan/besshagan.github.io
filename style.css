@@ -73,7 +73,7 @@ body {
 }
 
 /* ========================================================
-   🌞/🌙 DARK MODE (in nav bar)
+   🌞/🌙 DARK MODE TOGGLE (in nav bar)
    ======================================================== */
 .dark-toggle-btn {
   position: absolute;
@@ -331,3 +331,59 @@ section {
     margin-bottom: 2rem;
   }
 }
+
+/* ========================================================
+   🌑 DARK MODE OVERRIDES
+   ======================================================== */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .hero-banner {
+  background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+}
+
+body.dark .project-card,
+body.dark .about,
+body.dark .contact {
+  background-color: #1e1e1e;
+  border-color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #90caf9;
+}
+
+body.dark a {
+  color: #80cbc4;
+}
+
+body.dark a:hover {
+  color: #4db6ac;
+}
+
+body.dark .button,
+body.dark .button-link {
+  background-color: #00796b;
+}
+
+body.dark .button:hover,
+body.dark .button-link:hover {
+  background-color: #004d40;
+}
+
+body.dark .button-outline {
+  background-color: transparent;
+  color: #80cbc4;
+  border-color: #80cbc4;
+}
+
+body.dark .button-outline:hover {
+  background-color: #80cbc4;
+  color: #121212;
+}
+
