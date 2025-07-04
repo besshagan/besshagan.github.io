@@ -144,7 +144,7 @@ body {
 }
 
 .about-left {
-  flex: 0 0 200px; /* Fixed width for image column */
+  flex: 0 0 400px; /* Fixed width for image column */
 }
 
 .about-right {
