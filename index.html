@@ -7,6 +7,7 @@
   <title>Portfolio | Bess Hagan</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -16,7 +17,12 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="/Bess_Hagan_Resume.pdf" target="_blank">Resume</a></li>
-    <button id="dark-toggle" class="dark-toggle-btn" aria-label="Toggle dark mode">🌙</button>
+    
+    <!--<button id="dark-toggle" class="dark-toggle-btn" aria-label="Toggle dark mode">🌙</button>-->
+    
+    <button id="dark-toggle" class="dark-toggle-btn" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
   </ul>
 </nav>
 
@@ -125,7 +131,7 @@
   <p>Built from scratch with HTML, CSS, and caffeine. ☕</p>
   </footer>
 
-<script>
+<!--<script>
   const toggleBtn = document.getElementById('dark-toggle');
   const body = document.body;
 
@@ -138,6 +144,24 @@
   toggleBtn.addEventListener('click', () => {
     const isDark = body.classList.toggle('dark');
     toggleBtn.textContent = isDark ? '🌞' : '🌙';
+    localStorage.setItem('darkMode', isDark);
+  });
+</script>-->
+
+<script>
+  const toggleBtn = document.getElementById('dark-toggle');
+  const icon = toggleBtn.querySelector('i');
+  const body = document.body;
+
+  // Init
+  if (localStorage.getItem('darkMode') === 'true') {
+    body.classList.add('dark');
+    icon.classList.replace('fa-moon', 'fa-sun');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const isDark = body.classList.toggle('dark');
+    icon.classList.replace(isDark ? 'fa-moon' : 'fa-sun', isDark ? 'fa-sun' : 'fa-moon');
     localStorage.setItem('darkMode', isDark);
   });
 </script>
