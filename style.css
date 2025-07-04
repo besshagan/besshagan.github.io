@@ -340,6 +340,26 @@ body.dark {
   color: #e0e0e0;
 }
 
+body.dark .navbar {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .navbar li a {
+  color: #90caf9;
+}
+
+body.dark .navbar li a:hover {
+  color: #4db6ac;
+}
+
+/*
+body.dark .dark-toggle-btn {
+  color: #90caf9;
+}
+*/
+
 body.dark .hero-banner {
   background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
 }
