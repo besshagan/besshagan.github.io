@@ -161,6 +161,7 @@ a:hover {
 }
 
 /* Unified button style */
+/*
 .button,
 .project-card a {
   display: inline-block;
@@ -176,6 +177,26 @@ a:hover {
 
 .button:hover,
 .project-card a:hover {
+  background-color: var(--teal-dark);
+}
+*/
+
+/* Button style */
+.button,
+.button-link {
+  display: inline-block;
+  background-color: var(--teal);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover,
+.button-link:hover {
   background-color: var(--teal-dark);
 }
 
