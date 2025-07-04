@@ -139,7 +139,7 @@ body {
 
 .about-top {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: flex-start;
 }
 
