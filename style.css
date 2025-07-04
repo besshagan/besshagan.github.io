@@ -130,22 +130,35 @@ body {
 /* === About Section === */
 .about-flex {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 2px 6px var(--shadow);
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  max-width: 180px;
 }
 
 .about-text {
   flex: 1;
   min-width: 250px;
+}
+
+.about-list {
+  margin-top: 1.5rem;
+  padding-left: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.about-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* ========================================================
