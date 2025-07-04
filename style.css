@@ -151,27 +151,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Unified button style */
-/*
-.button,
-.project-card a {
-  display: inline-block;
-  background-color: var(--teal);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-.button:hover,
-.project-card a:hover {
-  background-color: var(--teal-dark);
-}
-*/
-
 /* Button style */
 .button,
 .button-link {
@@ -215,7 +194,7 @@ a:hover {
   justify-content: left;
   flex-wrap: wrap;
   margin-top: 0;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 /* ========================================================
