@@ -134,12 +134,12 @@ body {
 .about-grid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .about-top {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: flex-start;
 }
 
