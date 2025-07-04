@@ -16,6 +16,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="/Bess_Hagan_Resume.pdf" target="_blank">Resume</a></li>
+    <button id="dark-toggle" class="dark-toggle-btn" aria-label="Toggle dark mode">🌙</button>
   </ul>
 </nav>
 
@@ -123,6 +124,24 @@
   <footer style="text-align: center; font-size: 0.9rem; margin-top: 4rem; color: #777;">
   <p>Built from scratch with HTML, CSS, and caffeine. ☕</p>
   </footer>
+
+<script>
+  const toggleBtn = document.getElementById('dark-toggle');
+  const body = document.body;
+
+  // Initialize dark mode state
+  if (localStorage.getItem('darkMode') === 'true') {
+    body.classList.add('dark');
+    toggleBtn.textContent = '🌞';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const isDark = body.classList.toggle('dark');
+    toggleBtn.textContent = isDark ? '🌞' : '🌙';
+    localStorage.setItem('darkMode', isDark);
+  });
+</script>
+
 </body>
 
 </html>
