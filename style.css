@@ -144,11 +144,11 @@ body {
 }
 
 .about-left {
-  flex: 0 0 200px; /* Fixed width for image column */
+  flex: 1; /* Takes remaining space */
 }
 
 .about-right {
-  flex: 1; /* Takes remaining space */
+  flex: 0 0 200px; /* Fixed width for image column */
 }
 
 .profile-pic {
