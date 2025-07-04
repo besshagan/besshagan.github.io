@@ -164,6 +164,8 @@ body {
   padding-left: 0;
   list-style: none;
   text-align: left;
+  width: 100%;
+  max-width: none;
 }
 
 .about-list li {
