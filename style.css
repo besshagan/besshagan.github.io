@@ -151,9 +151,11 @@ body {
   flex: 2; /* Takes remaining space */
 }
 
+/*
 .about-left, .about-right {
   border: 1px solid red;
 }
+*/
 
 .profile-pic {
   width: 100%;
