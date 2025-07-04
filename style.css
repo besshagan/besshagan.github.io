@@ -99,15 +99,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Button group layout inside hero */
-.button-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 3rem;
-  gap: 1rem;
-}
-
 .project-img {
   width: 100%;
   max-width: 400px;
@@ -216,6 +207,15 @@ a:hover {
 .button-outline:hover {
   background-color: var(--teal);
   color: white;
+}
+
+/* Button group layout */
+.button-row {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  gap: 1rem;
 }
 
 /* ========================================================
