@@ -73,6 +73,24 @@ body {
 }
 
 /* ========================================================
+   🌞/🌙 DARK MODE (in nav bar)
+   ======================================================== */
+.dark-toggle-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.dark-toggle-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ========================================================
    🧱 LAYOUT COMPONENTS
    ======================================================== */
 
