@@ -154,6 +154,7 @@ body {
 .profile-pic {
   width: 100%;
   max-width: 200px;
+  margin-top: 3rem;
   height: auto;
   border-radius: 32px;
   object-fit: cover;
