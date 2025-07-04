@@ -117,8 +117,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* === Project Images (NEEDS WORK) === */
-/*
+/* === Project Images === */
 .project-img {
   width: 100%;
   max-width: 400px;
@@ -127,9 +126,10 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 6px var(--shadow);
 }
-*/
 
-/* === About Section === */
+
+/* === About Section (NEEDS WORK) === */
+/*
 .profile-pic {
   width: 150px;
   height: 150px;
@@ -137,6 +137,7 @@ body {
   object-fit: cover;
   box-shadow: 0 2px 6px var(--shadow);
 }
+*/
 
 .about-flex {
   display: flex;
