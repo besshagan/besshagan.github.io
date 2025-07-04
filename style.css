@@ -139,16 +139,16 @@ body {
 
 .about-top {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: flex-start;
 }
 
 .about-left {
-  flex: 0.9; /* image column */
+  flex: 0.8; /* image column */
 }
 
 .about-right {
-  flex: 2.1; /* remaining space for text */
+  flex: 2.2; /* remaining space for text */
 }
 
 /*
