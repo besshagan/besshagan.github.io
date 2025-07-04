@@ -214,7 +214,7 @@ a:hover {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
-  margin-top: 3rem;
+  margin-top: 0;
   gap: 1rem;
 }
 
