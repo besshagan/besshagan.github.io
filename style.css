@@ -139,7 +139,7 @@ body {
 
 .about-top {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: flex-start;
 }
 
@@ -153,9 +153,9 @@ body {
 
 .profile-pic {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   height: auto;
-  border-radius: 128px;
+  border-radius: 256px;
   object-fit: cover;
   box-shadow: 0 2px 6px var(--shadow);
 }
