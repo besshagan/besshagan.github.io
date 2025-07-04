@@ -144,7 +144,7 @@ body {
 }
 
 .about-left {
-  flex: 0 0 400px; /* Fixed width for image column */
+  flex: 1; /* Fixed width for image column */
 }
 
 .about-right {
@@ -153,9 +153,9 @@ body {
 
 .profile-pic {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
-  border-radius: 64px;
+  border-radius: 128px;
   object-fit: cover;
   box-shadow: 0 2px 6px var(--shadow);
 }
@@ -395,11 +395,6 @@ section {
     flex: none;
     align-self: center;
   }
-  
-  .profile-pic {
-    max-width: 400px;
-  }
-}
 
 /* ========================================================
    🌑 DARK MODE OVERRIDES
