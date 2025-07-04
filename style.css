@@ -148,7 +148,7 @@ body {
 }
 
 .about-right {
-  flex: 1; /* Takes remaining space */
+  flex: 2; /* Takes remaining space */
 }
 
 .about-left, .about-right {
