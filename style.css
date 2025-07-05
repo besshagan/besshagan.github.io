@@ -139,12 +139,12 @@ body {
 
 .about-top {
   display: flex;
-  gap: 5rem;
+  gap: 4rem;
   align-items: flex-start;
 }
 
 .about-left {
-  flex: 0 0 270px; /* fixed width for image column */
+  flex: 0 0 200px; /* fixed width for image column */
 }
 
 .about-right {
@@ -159,7 +159,7 @@ body {
 
 .profile-pic {
   width: 100%;
-  max-width: 270px;
+  max-width: 200px;
   height: auto;
   border-radius: 16px;
   object-fit: cover;
