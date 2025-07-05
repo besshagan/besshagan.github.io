@@ -144,22 +144,20 @@ body {
 }
 
 .about-left {
-  flex: 0 0 125px; /* fixed width for image column */
+  flex: 0 0 200px; /* fixed width for image column */
 }
 
 .about-right {
   flex: 1; /* remaining space for text */
 }
 
-/*
-.about-left, .about-right {
+.about-grid, .about-left, .about-right {
   border: 1px solid red;
 }
-*/
 
 .profile-pic {
   width: 100%;
-  max-width: 125px;
+  max-width: 200px;
   height: auto;
   border-radius: 16px;
   object-fit: cover;
