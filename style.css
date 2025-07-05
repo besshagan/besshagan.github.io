@@ -144,11 +144,11 @@ body {
 }
 
 .about-left {
-  flex: 0.6; /* image column */
+  flex: 0.7; /* image column */
 }
 
 .about-right {
-  flex: 2.4; /* remaining space for text */
+  flex: 2.3; /* remaining space for text */
 }
 
 /*
