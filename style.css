@@ -144,7 +144,7 @@ body {
 }
 
 .about-left {
-  flex: 0 0 200px; /* fixed width for image column */
+  flex: 0 0 100px; /* fixed width for image column */
 }
 
 .about-right {
@@ -159,7 +159,7 @@ body {
 
 .profile-pic {
   width: 100%;
-  max-width: 200px;
+  max-width: 100px;
   height: auto;
   border-radius: 16px;
   object-fit: cover;
