@@ -159,7 +159,7 @@ body {
 
 .profile-pic {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   height: auto;
   border-radius: 16px;
   object-fit: cover;
