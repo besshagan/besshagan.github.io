@@ -151,9 +151,9 @@ body {
   flex: 1; /* remaining space for text */
 }
 
-.about-grid, .about-left, .about-right {
+/* .about-left, .about-right {
   border: 1px solid red;
-}
+} */
 
 .profile-pic {
   width: 100%;
