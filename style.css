@@ -271,7 +271,7 @@ a:hover {
 }
 
 /* Button group layout (left-aligned) */
-.button-row-left {
+.button-row {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
@@ -280,7 +280,7 @@ a:hover {
 }
 
 /* Button group layout (centered) */
-.button-row {
+.button-row-center {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
