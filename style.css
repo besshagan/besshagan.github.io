@@ -270,10 +270,19 @@ a:hover {
   color: white;
 }
 
-/* Button group layout */
-.button-row {
+/* Button group layout (left-aligned) */
+.button-row-left {
   display: flex;
   justify-content: left;
+  flex-wrap: wrap;
+  margin-top: 0;
+  gap: 1.5rem;
+}
+
+/* Button group layout (centered) */
+.button-row-center {
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 0;
   gap: 1.5rem;
