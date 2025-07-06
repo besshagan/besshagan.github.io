@@ -280,7 +280,7 @@ a:hover {
 }
 
 /* Button group layout (centered) */
-.button-row-center {
+.button-row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
