@@ -379,7 +379,7 @@ section {
 /* ========================================================
    📱 RESPONSIVE STYLES
    ======================================================== */
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   body {
     padding: 0 1rem;
     font-size: 0.95rem;
