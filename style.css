@@ -370,7 +370,7 @@ section {
 /* ========================================================
    📱 RESPONSIVE STYLES
    ======================================================== */
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   body {
     padding: 0 1rem;
     font-size: 0.95rem;
