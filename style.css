@@ -396,21 +396,23 @@ section {
 
   /* Stack vertically on mobile */
   .about-top {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center; /* Centers content horizontally */
-    text-align: center;  /* Center-align text */
+    display: flex !important; /* Force flex override */
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
   }
-  
+
   .about-left {
     flex: none;
     align-self: center;
-    width: 200px; /* Image Size */
+    width: 200px;
+    margin-bottom: 1rem;
   }
+
   .about-right {
     flex: none;
     width: 100%;
-    text-align: center; /* Optional: revert back to left-aligned text */
+    text-align: center;
   }
 }
 
