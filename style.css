@@ -405,7 +405,7 @@ section {
      flex: none;
      width: 100%;
      max-width: 200px;
-     margin: 0 auto 1rem;
+     margin: 0 auto 0.5rem;
    }
    
    .about-right {
