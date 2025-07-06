@@ -276,7 +276,7 @@ a:hover {
   justify-content: left;
   flex-wrap: wrap;
   margin-top: 0;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 /* Button group layout (centered) */
@@ -285,7 +285,7 @@ a:hover {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 0;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 /* ========================================================
