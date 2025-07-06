@@ -408,8 +408,9 @@ section {
     width: 200px; /* Image Size */
   }
   .about-right {
+    flex: none;
     width: 100%;
-    text-align: left; /* Optional: revert back to left-aligned text */
+    text-align: center; /* Optional: revert back to left-aligned text */
   }
 }
 
