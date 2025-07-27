@@ -41,15 +41,15 @@ body {
 
 .hero h1 {
   margin: 0;
-  font-size: 4rem;         /* Scales better across screen sizes */
+  font-size: 4.5rem;
   line-height: 1.2;
 }
 
 .hero h2 {
   margin: 1rem 0 0;
-  font-size: 1.15rem;       /* Slightly larger for readability */
+  font-size: 1.15rem;
   font-weight: 400;        /* Optional: softens the subheader */
-  max-width: 850px;        /* Optional: prevent overly long lines */
+  max-width: 800px;        /* Optional: prevent overly long lines */
   margin-left: auto;
   margin-right: auto;
 }
@@ -116,6 +116,6 @@ footer {
   padding: 2rem 1rem;
   margin-top: 2rem;
   background: var(--accent-light);
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #555;
 }
