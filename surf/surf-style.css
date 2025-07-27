@@ -1,21 +1,26 @@
 :root {
-  --bg-main: #f3e8fc;
-  --text-main: #2e1a47;
+  /* === Base Page Colors === */
+  --bg-main: #f3e8fc;                     /* Main background – soft lavender with a bit more saturation */
+  --text-main: #2e1a47;                   /* Primary text color – deep violet for good contrast on lavender */
 
-  --hero-gradient-start: #a678d5;   /* slightly richer */
-  --hero-gradient-end: #e8def8;     /* softer match with bg-main */
-  --hero-text: #2e1a47;
+  /* === Hero Section Gradient === */
+  --hero-gradient-start: #a678d5;        /* Left side of hero gradient – rich purple tone */
+  --hero-gradient-end: #e8def8;          /* Right side of hero gradient – pale lilac to blend with bg */
+  --hero-text: #2e1a47;                  /* Hero text color – matches main text for visual harmony */
 
-  --primary: #7b1fa2;               /* a bit bolder than before */
-  --primary-light: #ab47bc;
-  --primary-dark: #4a0072;
+  /* === Primary Accent Colors (Headings, Buttons, Highlights) === */
+  --primary: #7b1fa2;                    /* Main accent – bold purple for h2s and major UI elements */
+  --primary-light: #ab47bc;              /* Light accent – used for links and interactive elements */
+  --primary-dark: #4a0072;               /* Dark accent – used for link hover and strong emphasis */
 
-  --accent-light: #e0cdee;          /* slightly lighter than d1c4e9 */
-  --accent-border: #d8bfe9;         /* matches better with bg-main */
+  /* === Secondary Accents (Borders, Backgrounds, Footer) === */
+  --accent-light: #dcc0ef;              /* Footer and card backgrounds – warm and less gray than before */
+  --accent-border: #d8bfe9;             /* Border color – subtly contrasts with background and cards */
 
-  --link: var(--primary-light);
-  --link-hover: var(--primary-dark);
-  --focus-outline: #ba68c8;
+  /* === Interactive Focus and Link States === */
+  --link: var(--primary-light);         /* Default link color */
+  --link-hover: var(--primary-dark);    /* Link hover color */
+  --focus-outline: #ba68c8;             /* Focus ring for accessibility – semi-saturated violet */
 }
 
 body {
