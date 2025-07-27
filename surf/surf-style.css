@@ -36,12 +36,17 @@ body {
 
 .hero h1 {
   margin: 0;
-  font-size: 6rem;
+  font-size: 3rem;         /* Scales better across screen sizes */
+  line-height: 1.2;
 }
 
 .hero h2 {
-  margin: 0;
-  font-size: 1rem;
+  margin: 1rem 0 0;
+  font-size: 1.25rem;      /* Slightly larger for readability */
+  font-weight: 400;        /* Optional: softens the subheader */
+  max-width: 700px;        /* Optional: prevent overly long lines */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projects {
