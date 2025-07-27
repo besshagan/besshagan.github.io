@@ -49,7 +49,7 @@ body {
   margin: 1rem 0 0;
   font-size: 1.15rem;
   font-weight: 400;        /* Optional: softens the subheader */
-  max-width: 800px;        /* Optional: prevent overly long lines */
+  max-width: 750px;        /* Optional: prevent overly long lines */
   margin-left: auto;
   margin-right: auto;
 }
