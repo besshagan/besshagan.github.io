@@ -1,5 +1,5 @@
-/* :root {
-  --bg-main: #fdfbff;
+:root {
+  --bg-main: #f3e8fc;
   --text-main: #333;
 
   --hero-gradient-start: #b39ddb;
@@ -16,26 +16,6 @@
   --link: var(--primary-light);
   --link-hover: var(--primary-dark);
   --focus-outline: #ce93d8;
-} */
-
-:root {
-  --bg-main: #f9fafc;
-  --text-main: #333;
-
-  --hero-gradient-start: #1565c0;
-  --hero-gradient-end: #42a5f5;
-  --hero-text: #ffffff;
-
-  --primary: #0d47a1;
-  --primary-light: #1565c0;
-  --primary-dark: #0d47a1;
-
-  --accent-light: #bbdefb;
-  --accent-border: #e3f2fd;
-
-  --link: var(--primary-light);
-  --link-hover: var(--primary-dark);
-  --focus-outline: #90caf9;
 }
 
 body {
