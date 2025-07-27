@@ -47,9 +47,9 @@ body {
 
 .hero h2 {
   margin: 1rem 0 0;
-  font-size: 1.1rem;       /* Slightly larger for readability */
+  font-size: 1.15rem;       /* Slightly larger for readability */
   font-weight: 400;        /* Optional: softens the subheader */
-  max-width: 900px;        /* Optional: prevent overly long lines */
+  max-width: 850px;        /* Optional: prevent overly long lines */
   margin-left: auto;
   margin-right: auto;
 }
