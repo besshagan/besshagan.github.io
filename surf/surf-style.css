@@ -1,21 +1,21 @@
 :root {
   --bg-main: #f3e8fc;
-  --text-main: #333;
+  --text-main: #2e1a47;
 
-  --hero-gradient-start: #b39ddb;
-  --hero-gradient-end: #ede7f6;
+  --hero-gradient-start: #a678d5;   /* slightly richer */
+  --hero-gradient-end: #e8def8;     /* softer match with bg-main */
   --hero-text: #2e1a47;
 
-  --primary: #6a1b9a;
-  --primary-light: #8e24aa;
-  --primary-dark: #4a148c;
+  --primary: #7b1fa2;               /* a bit bolder than before */
+  --primary-light: #ab47bc;
+  --primary-dark: #4a0072;
 
-  --accent-light: #d1c4e9;
-  --accent-border: #e1bee7;
+  --accent-light: #e0cdee;          /* slightly lighter than d1c4e9 */
+  --accent-border: #d8bfe9;         /* matches better with bg-main */
 
   --link: var(--primary-light);
   --link-hover: var(--primary-dark);
-  --focus-outline: #ce93d8;
+  --focus-outline: #ba68c8;
 }
 
 body {
