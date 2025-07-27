@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --bg-main: #f9fafc;
   --text-main: #333;
 
@@ -16,6 +16,26 @@
   --link: var(--primary-light);
   --link-hover: var(--primary-dark);
   --focus-outline: #80cbc4;
+} */
+
+:root {
+  --bg-main: #fdfbff;
+  --text-main: #333;
+
+  --hero-gradient-start: #b39ddb;
+  --hero-gradient-end: #ede7f6;
+  --hero-text: #2e1a47;
+
+  --primary: #6a1b9a;
+  --primary-light: #8e24aa;
+  --primary-dark: #4a148c;
+
+  --accent-light: #d1c4e9;
+  --accent-border: #e1bee7;
+
+  --link: var(--primary-light);
+  --link-hover: var(--primary-dark);
+  --focus-outline: #ce93d8;
 }
 
 body {
