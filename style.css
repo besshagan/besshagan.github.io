@@ -334,6 +334,19 @@ a:hover {
   margin-top: 0;
 }
 
+.project-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;   /* space between images */
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+.project-images .project-img {
+  width: 100%;
+  max-width: 300px; /* controls how big each image gets */
+  margin: 0;        /* remove the auto-centering */
+}
+
 .about p,
 .contact p,
 .project-card p {
