@@ -82,6 +82,19 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.project-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;   /* space between images */
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+.project-images .project-img {
+  width: 100%;
+  max-width: 300px; /* controls how big each image gets */
+  margin: 0;        /* remove the auto-centering */
+}
+
 .links {
   list-style: none;
   padding-left: 0;
