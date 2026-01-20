@@ -23,6 +23,6 @@ The site highlights:
 
 ## 📬 Contact
 
-- Email: haganb@southwestern.edu  
+- Email: besshagan19@gmail.com  
 - GitHub: [github.com/besshagan](https://github.com/besshagan)  
 - LinkedIn: [linkedin.com/in/bess-hagan](https://linkedin.com/in/bess-hagan)
