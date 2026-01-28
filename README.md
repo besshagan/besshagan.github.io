@@ -1,16 +1,18 @@
 # Bess Hagan 🎓💻
 
-This is my personal portfolio site built with HTML and CSS to showcase my academic background, technical skills, and research experience in computer science, data science, and AI.
+This repository hosts my personal portfolio website, built with HTML and CSS and deployed via GitHub Pages. 
+
+The site presents my academic background, technical skills, and applied research experience, with a focus on data analysis and analytics-oriented work.
 
 ---
 
-## 🧠 About
-
-The site highlights:
-- Academic and research experience
-- Skills in data science, software development, and GIS
-- Projects in machine learning, procedural content generation, and more...
+## Portfolio Highlights:
+- Academic and research experience in computer science and data analytics
+- Experience with Python, SQL, and Excel for data analysis
+- Applied research projects involving data pipelines, evaluation, and analysis
 - A downloadable resume
+
+*Additional projects and analyses will be added as they are completed.*
 
 ---
 
@@ -18,7 +20,8 @@ The site highlights:
 
 - HTML5
 - CSS3
-- Hosted via [GitHub Pages](https://pages.github.com/)
+- GitHub Pages
+
 ---
 
 ## 📬 Contact
