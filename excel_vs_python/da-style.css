@@ -1,131 +1,302 @@
-:root{
-  --bg: #f6f8fb;
-  --card: #ffffff;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --border: #e5e7eb;
-  --shadow: 0 10px 25px rgba(0,0,0,.08);
-  --brand: #1e3a8a;    /* deep muted blue */
-  --brand-2: #3b82f6;  /* moderate blue */
+/* ============================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   ============================================
+   These are reusable values you can reference throughout your CSS.
+   Change them once here, and they update everywhere they're used.
+   
+   To use a variable: var(--variable-name)
+   Example: color: var(--text);
+*/
+:root {
+  /* COLORS - Background & Surface Colors */
+  --bg: #f6f8fb;           /* Main page background (light grayish-blue) */
+  --card: #ffffff;         /* Card/box backgrounds (white) */
+  
+  /* COLORS - Text Colors */
+  --text: #1f2937;         /* Main text color (dark gray, very readable) */
+  --muted: #6b7280;        /* Secondary text (lighter gray for less important info) */
+  
+  /* COLORS - Borders & Dividers */
+  --border: #e5e7eb;       /* Border color (light gray) */
+  
+  /* EFFECTS - Shadows */
+  --shadow: 0 10px 25px rgba(0,0,0,.08);  
+  /* Box shadow effect:
+     - 0 = no horizontal offset
+     - 10px = moves shadow down 10px
+     - 25px = blur radius (how fuzzy the shadow is)
+     - rgba(0,0,0,.08) = black at 8% opacity (subtle shadow)
+  */
+  
+  /* COLORS - Brand Colors (your blues) */
+  --brand: #1e3a8a;        /* Deep muted blue (darker) */
+  --brand-2: #3b82f6;      /* Moderate blue (lighter) */
 }
 
-*{ box-sizing: border-box; }
+/* ============================================
+   UNIVERSAL RESET
+   ============================================
+   The * selector targets EVERY element on the page
+*/
+* { 
+  box-sizing: border-box;  
+  /* Makes width/height include padding and borders.
+     Without this, adding padding makes elements bigger than expected.
+     With this, a 300px wide box stays 300px even with padding.
+  */
+}
 
-body{
-  margin: 0;
+/* ============================================
+   BODY - Main Page Setup
+   ============================================
+*/
+body {
+  margin: 0;  /* Remove default browser margins */
+  
+  /* FONT FAMILY - tries each font in order until one is found */
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+  /* system-ui = uses your computer's default font
+     -apple-system = Apple devices
+     Segoe UI = Windows
+     Roboto = Android
+     Arial = fallback for older systems
+     sans-serif = if all else fails, use any sans-serif font
+  */
+  
+  background: var(--bg);   /* Use the background color variable */
+  color: var(--text);      /* Default text color for the whole page */
+  line-height: 1.6;        /* Space between lines (1.6 = 160% of font size) */
+                           /* Makes text easier to read */
 }
 
-/* Header / hero */
-header{
-  text-align: center;
+/* ============================================
+   HEADER / HERO SECTION
+   ============================================
+   This is the blue banner at the top of your page
+*/
+header {
+  text-align: center;      /* Center all text inside the header */
+  
+  /* PADDING: space INSIDE the header 
+     Format: padding: TOP RIGHT BOTTOM LEFT
+     Or: padding: TOP/BOTTOM LEFT/RIGHT
+     Here: 3.25rem top, 1rem left/right, 2.5rem bottom
+     rem = relative to root font size (usually 16px, so 3.25rem = 52px)
+  */
   padding: 3.25rem 1rem 2.5rem;
-  color: #fff;
+  
+  color: #fff;  /* White text */
+  
+  /* LINEAR GRADIENT - creates a color transition background
+     Format: linear-gradient(ANGLE, COLOR1, COLOR2)
+     135deg = diagonal from bottom-left to top-right
+     Starts with --brand (dark blue) and transitions to --brand-2 (light blue)
+     
+     ANGLE REFERENCE:
+     0deg = bottom to top ↑
+     90deg = left to right →
+     135deg = diagonal ↗
+     180deg = top to bottom ↓
+     270deg = right to left ←
+  */
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
 }
 
-header h1{
-  margin: 0 0 .5rem;
+/* HEADER - Main Title (h1) */
+header h1 {
+  margin: 0 0 .5rem;  /* No top/left/right margin, .5rem bottom margin */
+  
+  /* CLAMP - responsive font size
+     Format: clamp(MIN, PREFERRED, MAX)
+     - MIN: 1.8rem (smallest it can be)
+     - PREFERRED: 3vw + 1rem (grows with viewport width)
+       vw = viewport width (3vw = 3% of screen width)
+     - MAX: 3rem (largest it can be)
+     This makes text automatically resize on different screen sizes!
+  */
   font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
-  letter-spacing: -0.02em;
+  
+  letter-spacing: -0.02em;  /* Slightly tighter letter spacing (makes it look modern) */
+                            /* Negative value = letters closer together */
 }
 
-header p{
-  margin: 0 auto;
-  max-width: 68ch;
-  font-size: clamp(1rem, .6vw + .9rem, 1.25rem);
-  opacity: 0.95;
+/* HEADER - Subtitle (p) */
+header p {
+  margin: 0 auto;          /* 0 top/bottom, auto left/right (centers it) */
+  max-width: 68ch;         /* ch = character width, limits line length to ~68 characters */
+                           /* This makes text easier to read (lines shouldn't be too long) */
+  
+  font-size: clamp(1rem, .6vw + .9rem, 1.25rem);  /* Responsive font size */
+  opacity: 0.95;           /* Slightly transparent (95% visible, 5% see-through) */
+                           /* Makes subtitle feel less heavy than the main title */
 }
 
-/* Main container */
-.container{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 2rem 1rem 3rem;
+/* ============================================
+   MAIN CONTAINER
+   ============================================
+   Wraps your main content and keeps it centered
+*/
+.container {
+  max-width: 980px;        /* Content won't get wider than 980px */
+  margin: 0 auto;          /* Centers the container horizontally */
+  padding: 2rem 1rem 3rem; /* Space inside: 2rem top, 1rem sides, 3rem bottom */
 }
 
-/* Status card */
-.status-card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  padding: 1.5rem 1.5rem;
+/* ============================================
+   STATUS CARD
+   ============================================
+   The white boxes that hold your content
+*/
+.status-card {
+  background: var(--card);             /* White background */
+  border: 1px solid var(--border);     /* 1px wide, solid line, light gray color */
+  border-radius: 14px;                 /* Rounded corners (14px radius) */
+  box-shadow: var(--shadow);           /* Adds the subtle shadow effect */
+  padding: 1.5rem 1.5rem;              /* Space inside the card */
 }
 
-.status-card h2{
-  margin: 0 0 .75rem;
-  font-size: 1.35rem;
-  letter-spacing: -0.01em;
+/* STATUS CARD - Main Heading (h2) */
+.status-card h2 {
+  margin: 0 0 .75rem;                  /* No top margin, .75rem bottom */
+  font-size: 1.35rem;                  /* Size of the text */
+  letter-spacing: -0.01em;             /* Slightly tighter letters */
 }
 
-.status-card h3{
-  margin: 1.25rem 0 .5rem;
-  font-size: 1.1rem;
-  color: #111827;
+/* STATUS CARD - Subheading (h3) */
+.status-card h3 {
+  margin: 1.25rem 0 .5rem;             /* 1.25rem top, 0 sides, .5rem bottom */
+  font-size: 1.1rem;                   
+  color: #111827;                      /* Almost black (darker than default text) */
 }
 
-/* Text */
-.status-card p{
-  margin: .5rem 0;
-  color: var(--text);
+/* STATUS CARD - Paragraphs */
+.status-card p {
+  margin: .5rem 0;                     /* .5rem top/bottom, 0 left/right */
+  color: var(--text);                  /* Uses default text color */
 }
 
-.note{
-  margin-top: 1.25rem;
-  padding: .75rem 1rem;
-  border-left: 4px solid var(--brand);
-  background: #eff6ff;
-  color: #1e40af;
-  border-radius: 10px;
-  font-style: normal;
+/* ============================================
+   NOTE BOX
+   ============================================
+   Highlighted info box (blue background with side stripe)
+*/
+.note {
+  margin-top: 1.25rem;                 /* Space above the note */
+  padding: .75rem 1rem;                /* Space inside */
+  
+  /* BORDER-LEFT - only adds border to left side */
+  border-left: 4px solid var(--brand); /* 4px thick blue stripe on left */
+  
+  background: #dbeafe;                 /* Light blue background */
+  color: #1e3a8a;                      /* Dark blue text (matches --brand) */
+  border-radius: 10px;                 /* Rounded corners */
+  font-style: normal;                  /* Ensures text isn't italic */
 }
 
-/* Lists */
-.status-card ul{
-  margin: .5rem 0 0;
-  padding-left: 1.2rem;
+/* ============================================
+   LISTS (ul = unordered list, bullets)
+   ============================================
+*/
+.status-card ul {
+  margin: .5rem 0 0;                   /* .5rem top, 0 bottom/sides */
+  padding-left: 1.2rem;                /* Indents the list from the left */
 }
 
-.status-card li{
-  margin: .35rem 0;
-  color: #374151;
+/* LIST ITEMS (li = individual bullet points) */
+.status-card li {
+  margin: .35rem 0;                    /* Small space between list items */
+  color: #374151;                      /* Medium gray text */
 }
 
-/* (Optional) gallery support for visuals later */
-.gallery{
+/* ============================================
+   GALLERY (Optional)
+   ============================================
+   Grid layout for displaying images/cards
+*/
+.gallery {
+  /* DISPLAY GRID - modern layout system */
   display: grid;
+  
+  /* GRID COLUMNS - how many columns and their size
+     repeat() = repeats a pattern
+     auto-fit = automatically fits as many columns as possible
+     minmax(280px, 1fr) = each column is:
+       - at least 280px wide
+       - at most 1fr (1 fraction of available space = equal width)
+     Result: columns automatically adjust to screen size!
+  */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.75rem;
+  
+  gap: 1.25rem;                        /* Space between grid items */
+  margin-top: 1.75rem;                 /* Space above gallery */
 }
 
-figure{
-  margin: 0;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
+/* FIGURE - Container for images with captions */
+figure {
+  margin: 0;                           /* Remove default browser margins */
+  background: var(--card);             /* White background */
+  border: 1px solid var(--border);     /* Light border */
+  border-radius: 14px;                 /* Rounded corners */
+  overflow: hidden;                    /* Clips anything that goes outside the border radius */
+  box-shadow: var(--shadow);           /* Shadow effect */
 }
 
-figure img{
-  width: 100%;
-  display: block;
-  height: auto;
+/* IMAGES inside figures */
+figure img {
+  width: 100%;                         /* Image fills full width of container */
+  display: block;                      /* Removes tiny gap below images */
+  height: auto;                        /* Height adjusts automatically to maintain aspect ratio */
 }
 
-figcaption{
-  padding: .9rem 1rem;
-  font-size: .95rem;
-  color: var(--muted);
-  text-align: left;
+/* FIGCAPTION - Text description below images */
+figcaption {
+  padding: .9rem 1rem;                 /* Space inside */
+  font-size: .95rem;                   /* Slightly smaller text */
+  color: var(--muted);                 /* Gray text (less prominent) */
+  text-align: left;                    /* Align text to left */
 }
 
-/* Small screens */
-@media (max-width: 520px){
-  .status-card{ padding: 1.2rem; }
+/* ============================================
+   MEDIA QUERY - Mobile Responsiveness
+   ============================================
+   Changes styles when screen is 520px or smaller
+*/
+@media (max-width: 520px) {
+  .status-card { 
+    padding: 1.2rem;                   /* Less padding on small screens */
+                                       /* Saves space on mobile devices */
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY - Focus States
+   ============================================
+   Shows outline when you tab through elements (keyboard navigation)
+*/
+*:focus-visible {
+  outline: 2px solid var(--brand-2);   /* 2px blue outline */
+  outline-offset: 2px;                 /* 2px gap between element and outline */
+                                       /* Important for users who can't use a mouse! */
+}
+
+/* ============================================
+   POLISH - Hover Effects
+   ============================================
+   Makes cards interactive when you hover over them
+*/
+.status-card, figure {
+  /* TRANSITION - makes changes smooth instead of instant
+     Format: PROPERTY DURATION TIMING-FUNCTION
+     - box-shadow and transform will animate
+     - 0.2s = animation takes 0.2 seconds
+     - ease = starts slow, speeds up, slows down at end
+  */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* When hovering over cards or figures */
+.status-card:hover, figure:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,.12);  /* Stronger, bigger shadow */
+  transform: translateY(-2px);              /* Moves element up 2px */
+                                            /* Creates a "lifting" effect */
 }
