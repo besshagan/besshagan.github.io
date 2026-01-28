@@ -5,8 +5,8 @@
   --muted: #6b7280;
   --border: #e5e7eb;
   --shadow: 0 10px 25px rgba(0,0,0,.08);
-  --brand: #2563eb;
-  --brand-2: #60a5fa;
+  --brand: #1e3a8a;    /* deep muted blue */
+  --brand-2: #3b82f6;  /* moderate blue */
 }
 
 *{ box-sizing: border-box; }
@@ -24,7 +24,7 @@ header{
   text-align: center;
   padding: 3.25rem 1rem 2.5rem;
   color: #fff;
-  background: linear-gradient(50deg, var(--brand), var(--brand-2));
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
 }
 
 header h1{
