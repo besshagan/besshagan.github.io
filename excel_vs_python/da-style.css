@@ -24,7 +24,7 @@ header{
   text-align: center;
   padding: 3.25rem 1rem 2.5rem;
   color: #fff;
-  background: linear-gradient(300deg, var(--brand), var(--brand-2));
+  background: linear-gradient(50deg, var(--brand), var(--brand-2));
 }
 
 header h1{
