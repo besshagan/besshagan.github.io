@@ -1,109 +1,133 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
+/* da-style.css — clean project page styling */
+
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 10px 25px rgba(0,0,0,.08);
+  --brand: #2563eb;
+  --brand-2: #60a5fa;
 }
 
-header {
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header / hero */
+header{
   text-align: center;
-  padding: 2rem 1rem;
-  background-color: #4a90e2;
-  color: white;
+  padding: 3.25rem 1rem 2.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+header h1{
+  margin: 0 0 .5rem;
+  font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
+  letter-spacing: -0.02em;
 }
 
-header p {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
+header p{
+  margin: 0 auto;
+  max-width: 68ch;
+  font-size: clamp(1rem, .6vw + .9rem, 1.25rem);
+  opacity: 0.95;
 }
 
-.gallery {
+/* Main container */
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+/* Status card */
+.status-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem 1.5rem;
+}
+
+.status-card h2{
+  margin: 0 0 .75rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
+.status-card h3{
+  margin: 1.25rem 0 .5rem;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+/* Text */
+.status-card p{
+  margin: .5rem 0;
+  color: var(--text);
+}
+
+.note{
+  margin-top: 1.25rem;
+  padding: .75rem 1rem;
+  border-left: 4px solid var(--brand);
+  background: #eff6ff;
+  color: #1e40af;
+  border-radius: 10px;
+  font-style: normal;
+}
+
+/* Lists */
+.status-card ul{
+  margin: .5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.status-card li{
+  margin: .35rem 0;
+  color: #374151;
+}
+
+/* (Optional) gallery support if you add visuals later */
+.gallery{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
 }
 
-figure {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+figure{
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
-figure img {
+figure img{
   width: 100%;
   display: block;
   height: auto;
 }
 
-figcaption {
-  padding: 1rem;
-  text-align: center;
-  font-size: 1rem;
-  color: #555;
+figcaption{
+  padding: .9rem 1rem;
+  font-size: .95rem;
+  color: var(--muted);
+  text-align: left;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #4a90e2;
-  color: white;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-header p {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-figure {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-figure img {
-  width: 100%;
-  display: block;
-  height: auto;
-}
-
-figcaption {
-  padding: 1rem;
-  text-align: center;
-  font-size: 1rem;
-  color: #555;
+/* Small screens */
+@media (max-width: 520px){
+  .status-card{ padding: 1.2rem; }
 }
