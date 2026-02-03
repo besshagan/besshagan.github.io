@@ -71,21 +71,29 @@
     <section class="status-card">
       <h2>Excel Highlights</h2>
       <p class="muted">Selected charts from the Excel analysis. Full write-up is linked above.</p>
-
-      <ul class="highlights">
-        <li>
-          <strong>Q1:</strong> Revenue is concentrated in a few categories despite similar unit volume.
-          <a href="charts/q1-revenue-vs-volume.png" target="_blank" rel="noopener">View chart</a>
-        </li>
-        <li>
-          <strong>Q3:</strong> Returning customers place ~7.5× more orders than single-purchase customers.
-          <a href="charts/q3-orders-by-customer-type.png" target="_blank" rel="noopener">View chart</a>
-        </li>
-        <li>
-          <strong>Q5:</strong> Delivery speed shows minimal relationship with customer ratings.
-          <a href="charts/q5-rating-by-delivery.png" target="_blank" rel="noopener">View chart</a>
-        </li>
-      </ul>
+      
+      <div class="chart-grid">
+        <div class="chart-item">
+          <a href="charts/q1-revenue-vs-volume.png" target="_blank" rel="noopener">
+            <img src="charts/q1-revenue-vs-volume.png" alt="Q1: Revenue vs Volume by Category">
+          </a>
+          <p><strong>Q1:</strong> Revenue is concentrated in a few categories despite similar unit volume.</p>
+        </div>
+        
+        <div class="chart-item">
+          <a href="charts/q3-orders-by-customer-type.png" target="_blank" rel="noopener">
+            <img src="charts/q3-orders-by-customer-type.png" alt="Q3: Orders by Customer Type">
+          </a>
+          <p><strong>Q3:</strong> Returning customers place ~7.5× more orders than single-purchase customers.</p>
+        </div>
+        
+        <div class="chart-item">
+          <a href="charts/q5-rating-by-delivery.png" target="_blank" rel="noopener">
+            <img src="charts/q5-rating-by-delivery.png" alt="Q5: Rating by Delivery Speed">
+          </a>
+          <p><strong>Q5:</strong> Delivery speed shows minimal relationship with customer ratings.</p>
+        </div>
+      </div>
     </section>
   </main>
 </body>
