@@ -252,7 +252,6 @@ figure {
 /* IMAGES inside figures */
 figure img {
   width: 100%;
-  object-fit: cover;       /* <-- crops to fill */
   object-position: top;    /* charts usually look best anchored at top */
   background: #f3f4f6;     /* subtle fallback if image has transparency */
 }
