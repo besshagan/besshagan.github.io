@@ -252,7 +252,7 @@ figure {
 /* IMAGES inside figures */
 figure img {
   width: 100%;
-  object-position: top;    /* charts usually look best anchored at top */
+  object-position: top;
   background: #f3f4f6;     /* subtle fallback if image has transparency */
 }
 
@@ -261,6 +261,7 @@ figcaption {
   flex: 1;
   display: flex;
   align-items: flex-start;
+  object-position: bottom;
 }
 
 /* ============================================
