@@ -217,6 +217,9 @@ code{
   text-decoration: underline;
 }
 
+.status-card + .status-card{
+  margin-top: 1.25rem;
+}
 
 /* Small-screen card padding */
 @media (max-width: 520px){
