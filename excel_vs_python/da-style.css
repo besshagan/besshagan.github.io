@@ -225,3 +225,63 @@ code{
 @media (max-width: 520px){
   .status-card{ padding: 1.2rem; }
 }
+
+/* =========================================================
+   CHART GRID (thumbnail gallery)
+   ========================================================= */
+.chart-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.chart-item{
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .75rem;
+  background: #f9fafb;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.chart-item:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.chart-item a{
+  display: block;
+  margin-bottom: .5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.chart-item img{
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity .2s ease;
+}
+
+.chart-item a:hover img{
+  opacity: .85;
+}
+
+.chart-item p{
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.chart-item strong{
+  color: var(--brand);
+}
+
+/* Responsive: single column on small screens */
+@media (max-width: 520px){
+  .chart-grid{
+    grid-template-columns: 1fr;
+  }
+}
