@@ -225,22 +225,10 @@ header p {
    ============================================
    Grid layout for displaying images/cards
 */
-.gallery {
-  /* DISPLAY GRID - modern layout system */
-  display: grid;
-  
-  /* GRID COLUMNS - how many columns and their size
-     repeat() = repeats a pattern
-     auto-fit = automatically fits as many columns as possible
-     minmax(280px, 1fr) = each column is:
-       - at least 280px wide
-       - at most 1fr (1 fraction of available space = equal width)
-     Result: columns automatically adjust to screen size!
-  */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  
-  gap: 1.25rem;                        /* Space between grid items */
-  margin-top: 1.75rem;                 /* Space above gallery */
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
 /* FIGURE - Container for images with captions */
@@ -282,6 +270,13 @@ figcaption {
     padding: 1.2rem;                   /* Less padding on small screens */
                                        /* Saves space on mobile devices */
   }
+}
+
+@media (max-width: 980px){
+  .gallery{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px){
+  .gallery{ grid-template-columns: 1fr; }
 }
 
 /* ============================================
