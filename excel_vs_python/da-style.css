@@ -233,27 +233,24 @@ header p {
 
 /* FIGURE - Container for images with captions */
 figure {
-  margin: 0;                           /* Remove default browser margins */
-  background: var(--card);             /* White background */
-  border: 1px solid var(--border);     /* Light border */
-  border-radius: 14px;                 /* Rounded corners */
-  overflow: hidden;                    /* Clips anything that goes outside the border radius */
-  box-shadow: var(--shadow);           /* Shadow effect */
+  display: flex;
+  flex-direction: column;
 }
 
 /* IMAGES inside figures */
 figure img {
-  width: 100%;                         /* Image fills full width of container */
-  display: block;                      /* Removes tiny gap below images */
-  height: auto;                        /* Height adjusts automatically to maintain aspect ratio */
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* <-- enforces consistent box */
+  object-fit: cover;       /* <-- crops to fill */
+  object-position: top;    /* charts usually look best anchored at top */
+  background: #f3f4f6;     /* subtle fallback if image has transparency */
 }
 
 /* FIGCAPTION - Text description below images */
 figcaption {
-  padding: .9rem 1rem;                 /* Space inside */
-  font-size: .95rem;                   /* Slightly smaller text */
-  color: var(--muted);                 /* Gray text (less prominent) */
-  text-align: left;                    /* Align text to left */
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
 }
 
 /* ============================================
