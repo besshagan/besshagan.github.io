@@ -300,3 +300,72 @@ figcaption {
   transform: translateY(-2px);              /* Moves element up 2px */
                                             /* Creates a "lifting" effect */
 }
+
+/* ============================================
+   BUTTON / LINK STYLES (Project CTAs)
+   ============================================ */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: .6rem .9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+}
+
+.btn.primary {
+  background: var(--brand);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ============================================
+   QUICK STATS (tiny KPI row)
+   ============================================ */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .75rem 1rem;
+  background: #f9fafb;
+}
+
+.kpi .label {
+  color: var(--muted);
+  font-size: .85rem;
+  margin: 0;
+}
+
+.kpi .value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: .15rem 0 0;
+}
+
+/* Make code-ish terms readable */
+code {
+  background: #eef2ff;
+  padding: .1rem .35rem;
+  border-radius: 6px;
+  font-size: .95em;
+}
