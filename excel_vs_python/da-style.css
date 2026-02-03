@@ -247,21 +247,24 @@ header p {
 figure {
   display: flex;
   flex-direction: column;
+  height: 100%;               /* allows children to fill consistently */
 }
 
-/* IMAGES inside figures */
+/* Fixed visual area for all images */
 figure img {
   width: 100%;
+  aspect-ratio: 16 / 9;       /* consistent image frame */
+  object-fit: cover;          /* or 'contain' if you prefer no cropping */
   object-position: top;
-  background: #f3f4f6;     /* subtle fallback if image has transparency */
+  background: #f3f4f6;
 }
 
-/* FIGCAPTION - Text description below images */
+/* Caption pushed to bottom */
 figcaption {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-  object-position: bottom;
+  margin-top: auto;           /* THIS is the magic line */
+  padding: .9rem 1rem;
+  font-size: .95rem;
+  color: var(--muted);
 }
 
 /* ============================================
