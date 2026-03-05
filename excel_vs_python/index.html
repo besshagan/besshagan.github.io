@@ -20,9 +20,6 @@
   A comparative analysis of a 2023 e-commerce dataset using
   <strong>Excel Pivot Tables</strong> and
   <strong>Python (Pandas + Matplotlib)</strong>.
-  The project evaluates how analytical tools influence workflow,
-  scalability, and reproducibility while producing the same
-  business insights.
   </p>
 </header>
 
@@ -37,8 +34,10 @@ This project analyzes a 2023 e-commerce dataset by answering the
 same business questions using two analytical workflows:
 <strong>Excel Pivot Tables</strong> and
 <strong>Python (Pandas + Matplotlib)</strong>.
-The objective is to compare how each tool affects
-analysis speed, reproducibility, scalability, and visualization.
+Findings show that revenue is concentrated in Electronics, Home Garden, and Sports products
+and is driven primarily by customer retention rather than discounts, device choice, or delivery speed. These results
+suggest that long-term growth efforts should prioritize repeat purchasing behavior over short-term tactical optimizations.
+A comparison of how each tool affects analysis speed, reproducibility, scalability, and visualization is also provided.
 </p>
 
 <div class="kpis">
@@ -92,20 +91,20 @@ making them ideal for quick business questions.
 
 <li>
 <strong>Automation and reproducibility:</strong>
-Python requires more setup but produces a fully reproducible workflow where
-data cleaning, aggregation, and visualization can be rerun automatically.
+Python requires more setup but produces a fully reproducible workflow for
+data cleaning, aggregation, and visualization.
 </li>
 
 <li>
 <strong>Scalability:</strong>
-Excel performs well for moderate datasets but becomes cumbersome at scale.
-Python handles larger datasets and integrates naturally into automated pipelines.
+Excel performs well for moderate datasets but may become cumbersome at scale.
+Python is well suited for larger datasets and integration into automated pipelines.
 </li>
 
 <li>
 <strong>Visualization flexibility:</strong>
 Excel provides fast built-in charts, while Python libraries like Matplotlib
-offer deeper customization and programmatic control.
+offer deeper customization and control.
 </li>
 
 <li>
@@ -169,18 +168,6 @@ share of total revenue.
 </div>
 
 <div class="chart-item">
-<a href="charts/q3-orders-by-customer-type.png" target="_blank" rel="noopener">
-<img src="charts/q3-orders-by-customer-type.png" alt="Orders by Customer Type">
-</a>
-
-<p>
-<strong>Customer behavior:</strong>
-Returning customers place roughly 6× more orders than
-single-purchase customers.
-</p>
-</div>
-
-<div class="chart-item">
 <a href="charts/q5-rating-by-delivery.png" target="_blank" rel="noopener">
 <img src="charts/q5-rating-by-delivery.png" alt="Rating by Delivery Speed">
 </a>
@@ -188,6 +175,17 @@ single-purchase customers.
 <p>
 <strong>Delivery experience:</strong>
 Faster delivery does not strongly correlate with higher customer ratings.
+</p>
+</div>
+
+<div class="chart-item">
+<a href="charts/q3-orders-by-customer-type.png" target="_blank" rel="noopener">
+<img src="charts/q3-orders-by-customer-type.png" alt="Orders by Customer Type">
+</a>
+
+<p>
+<strong>Customer behavior:</strong>
+There is only a $27 difference in average order value between single-purchase and returning customers.
 </p>
 </div>
 
@@ -237,9 +235,8 @@ while desktop users show slightly higher average order values.
 </a>
 
 <p>
-<strong>Customer segmentation:</strong>
-Groupby analysis highlights the disproportionate contribution
-of returning customers to total purchase activity.
+<strong>Customer behavior:</strong>
+Returning customers place roughly 6× more orders than single-purchase customers.
 </p>
 </div>
 
