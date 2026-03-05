@@ -16,7 +16,7 @@
 <header>
   <h1>2023 E-Commerce<br><em>Sales Analysis</em></h1>
   <p class="header-deck">
-    Five business questions answered using Excel Pivot Tables and Python (Pandas) 
+    Five business questions answered using Excel Pivot Tables and Python (Pandas)
     to compare analytical workflows.
   </p>
   <div class="header-meta">
@@ -26,6 +26,7 @@
 
 <main>
 <div class="container">
+
   <!-- ===================================================
        SECTION 1 — OVERVIEW
        =================================================== -->
@@ -44,6 +45,9 @@
       like blanket discounting or delivery speed improvements.
     </div>
 
+  </section><!-- /.section overview -->
+
+
   <!-- ===================================================
        SECTION 2 — FIVE BUSINESS QUESTIONS (ACCORDION)
        =================================================== -->
@@ -53,9 +57,7 @@
     <p>
       Each question below is answered with a chart and a written finding.
     </p>
-    <p>
-      <i>Click to expand.</i>
-    </p>
+    <p class="muted">Click to expand.</p>
 
     <div class="accordion">
 
@@ -104,8 +106,8 @@
         <div class="q-body">
           <p>
             Discounted orders had slightly higher pre-discount order values than non-discounted orders.
-            On average, orders receiving discounts were approximately <span class="stat">$39 higher</span> 
-            before the discount was applied. However, this does not establish that higher discount amounts 
+            On average, orders receiving discounts were approximately <span class="stat">$39 higher</span>
+            before the discount was applied. However, this does not establish that higher discount amounts
             drive increased order revenue.
           </p>
           <a class="q-chart" href="charts/q2-aov-by-discount-status.png" target="_blank" rel="noopener">
@@ -134,8 +136,8 @@
             <span class="stat">6.2× more orders</span>.
           </p>
           <p>
-            This indicates that revenue growth is driven by customer retention rather than higher 
-            per-order spend. Strategies such as loyalty programs or re-engagement campaigns that 
+            This indicates that revenue growth is driven by customer retention rather than higher
+            per-order spend. Strategies such as loyalty programs or re-engagement campaigns that
             increase purchase frequency are likely to outperform those focused on upselling.
           </p>
           <a class="q-chart" href="charts/q3-aov-and-volume-by-customer-type.png" target="_blank" rel="noopener">
@@ -158,15 +160,15 @@
           <p>
             Device type shows a clear relationship with purchasing behavior but only a modest impact on order value. Mobile devices
             account for the majority of orders, while Desktop orders have an average order value approximately <span class="stat">$61 higher</span> than
-            Mobile orders. Tablet usage remains relatively low across both order volume and value. 
+            Mobile orders. Tablet usage remains relatively low across both order volume and value.
           </p>
           <p>
-            Overall, these results suggest that device choice primarily influences purchasing frequency rather than spend per transaction, 
+            Overall, these results suggest that device choice primarily influences purchasing frequency rather than spend per transaction,
             with Mobile devices serving as the dominant channel for engagement and Desktop devices providing a small advantage in per-order value.
           </p>
-            <a class="q-chart" href="charts/q4-device-behavior.png" target="_blank" rel="noopener">
+          <a class="q-chart" href="charts/q4-device-behavior.png" target="_blank" rel="noopener">
             <figure>
-              <img src="charts/q4-device-behavior.png" alt="Bar chart showing AOV by device type + Pie chart of total orders by device type">
+              <img src="charts/q4-device-behavior.png" alt="Bar chart showing AOV by device type and pie chart of total orders by device type">
               <figcaption>AOV and Percentage of Orders by Device Type (2023) — click to enlarge</figcaption>
             </figure>
           </a>
@@ -200,7 +202,7 @@
       </details>
 
     </div><!-- /.accordion -->
-  </section>
+  </section><!-- /.section analysis -->
 
 
   <!-- ===================================================
@@ -210,7 +212,7 @@
     <span class="label">Workflow</span>
     <h2>Excel vs. Python</h2>
     <p>
-      After completing this analysis using Excel Pivot Tables, 
+      After completing this analysis using Excel Pivot Tables,
       I reproduced and validated those results in Python using Pandas and Matplotlib.
       As expected, results were identical. Thus, the differences that matter are in workflow.
     </p>
@@ -218,7 +220,7 @@
     <div class="callout">
       For a clean, moderately-sized dataset like this one, Excel was the practical choice:
       faster to set up, easier to present, and no environment to configure.
-      Python's overhead wasn't justified at this scale, but the tradeoffs reverse quickly 
+      Python's overhead wasn't justified at this scale, but the tradeoffs reverse quickly
       as data volume, reproducibility requirements, or team size grow.
     </div>
 
@@ -247,7 +249,7 @@
             Steps are manual and less auditable. Risky for anything repeated or handed off.
           </td>
           <td>
-            Methodology is documented by default in code.
+            Methodology is documented in code by default.
             <br><span class="badge badge-python">Python wins</span>
           </td>
         </tr>
@@ -278,7 +280,7 @@
             <br><span class="badge badge-excel">Excel wins</span>
           </td>
           <td>
-            Better for technical teams requiring version-control via Git.
+            Better for technical teams requiring version control via Git.
           </td>
         </tr>
       </tbody>
@@ -304,7 +306,8 @@
         Dataset (Kaggle)
       </a>
     </div>
-  </section>
+
+  </section><!-- /.section workflow -->
 
 
 </div><!-- /.container -->
