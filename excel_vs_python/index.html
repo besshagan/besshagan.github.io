@@ -1,139 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Excel vs. Python | Bess Hagan</title>
-  <link rel="stylesheet" href="da-style.css">
-  <meta name="description" content="A comparative analysis of e-commerce sales data using Excel Pivot Tables and Python Pandas to evaluate analytical workflows and business insights.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Excel vs. Python | Bess Hagan</title>
+
+<link rel="stylesheet" href="da-style.css">
+
+<meta name="description" content="A comparative analysis of e-commerce sales data using Excel Pivot Tables and Python Pandas to evaluate analytical workflows and business insights.">
 </head>
+
 <body>
-  <header>
-    <h1>Excel vs. Python: E-Commerce Sales Analysis</h1>
-    <p>
-    A comparative analysis of a 2023 e-commerce dataset using 
-    <strong>Excel Pivot Tables</strong> and 
-    <strong>Python (Pandas + Matplotlib)</strong>. 
-    The project evaluates how different analytical tools affect workflow, 
-    scalability, and reproducibility while producing the same business insights.
-    </p>
-  </header>
 
-  <main class="container">
-    <section class="status-card">
-      <h2>Project Overview</h2>
+<header>
+  <h1>Excel vs. Python: E-Commerce Sales Analysis</h1>
 
-      <p>
-        This project evaluates <strong>Excel Pivot Tables</strong> and <strong>Python (Pandas + Matplotlib)</strong>
-        by answering identical business questions on a 2023 e-commerce dataset.
-        The goal is to compare analytical workflows, scalability, reproducibility,
-        and insight generation in a realistic business context.
-      </p>
-      
-      <div class="kpis">
-        <div class="kpi">
-          <p class="label"><strong>Excel Analysis</strong></p>
-          <p class="value">5 business questions</p>
-        </div>
-        <div class="kpi">
-          <p class="label"><strong>Python Analysis</strong></p>
-          <p class="value">5 business questions</p>
-        </div>
-        <div class="kpi">
-          <p class="label"><strong>Last updated</strong></p>
-          <p class="value">March 2026</p>
-        </div>
-      </div>
+  <p>
+  A comparative analysis of a 2023 e-commerce dataset using
+  <strong>Excel Pivot Tables</strong> and
+  <strong>Python (Pandas + Matplotlib)</strong>.
+  The project evaluates how analytical tools influence workflow,
+  scalability, and reproducibility while producing the same
+  business insights.
+  </p>
+</header>
 
-      <h3>Business Findings</h3>
-      <ul>
-        <li><strong>Revenue concentration:</strong> Revenue is concentrated in Electronics, Home &amp; Garden, and Sports.</li>
-        <li><strong>Discounts:</strong> There is no strong evidence that discounts independently increase order value.</li>
-        <li><strong>Retention:</strong> Returning customers drive revenue primarily via higher purchase frequency.</li>
-        <li><strong>Device:</strong> Mobile dominates order volume; desktop has slightly higher average order value.</li>
-        <li><strong>Delivery:</strong> Delivery speed shows minimal relationship with customer ratings.</li>
-      </ul>
+<main class="container">
 
-      <p class="note">
-      Both tools produced consistent business conclusions. The primary differences 
-      emerged in workflow efficiency, automation, and long-term scalability.
-      </p>
+<section class="status-card">
 
-      <div class="actions">
-        <a class="btn primary" href="2023-ecommerce-excel-analysis.pdf" target="_blank" rel="noopener">
-          View Excel write-up (PDF)
-        </a>
-        <a class="btn primary"
-           href="https://colab.research.google.com/drive/1sHEgO7XtZu9A7D-WdCp2Wm-4pKGXwJHq"
-           target="_blank"
-           rel="noopener">
-           View Python (Pandas) Analysis – Google Colab
-        </a>
-        <a class="btn" href="https://www.kaggle.com/datasets/umuttuygurr/e-commerce-customer-behavior-and-sales-analysis-tr" target="_blank" rel="noopener">
-          Dataset (Kaggle)
-        </a>
-      </div>
-    </section>
+<h2>Project Overview</h2>
 
-    <h3>Excel vs. Python: Workflow Comparison</h3>
-    
-    <ul class="highlights">
-      <li>
-        <strong>Speed for ad-hoc analysis:</strong> 
-        Excel Pivot Tables allowed rapid aggregation and exploration of the dataset with minimal setup.
-      </li>
-    
-      <li>
-        <strong>Automation and reproducibility:</strong> 
-        Python (Pandas) required more initial setup but enabled a fully reproducible workflow where 
-        data cleaning, aggregation, and visualization can be reproduced or automated.
-      </li>
-    
-      <li>
-        <strong>Scalability:</strong> 
-        Excel performed well for this moderately sized dataset but is likely to become cumbersome with larger datasets. 
-        Python is a better option for larger datasets and repeatable pipelines at scale.
-      </li>
-    
-      <li>
-        <strong>Visualization:</strong> 
-        Excel provides fast built-in charting, while Python (Matplotlib) offers greater control.
-      </li>
-    
-      <li>
-        <strong>Practical takeaway:</strong> 
-        Excel is ideal for quick exploratory analysis and stakeholder reporting, while Python is 
-        better suited for repeatable analytical workflows and larger data environments.
-      </li>
-    </ul>
+<p>
+This project analyzes a 2023 e-commerce dataset by answering the
+same business questions using two analytical workflows:
+<strong>Excel Pivot Tables</strong> and
+<strong>Python (Pandas + Matplotlib)</strong>.
+The objective is to compare how each tool affects
+analysis speed, reproducibility, scalability, and visualization.
+</p>
 
-    <section class="status-card">
-      <h2>Excel Analysis Highlights</h2>
-      <p class="muted">Selected charts from the Excel analysis. Full write-up is linked above.</p>
-      
-      <div class="chart-grid">
-        <div class="chart-item">
-          <a href="charts/q1-revenue-vs-volume.png" target="_blank" rel="noopener">
-            <img src="charts/q1-revenue-vs-volume.png" alt="Q1: Revenue vs Volume by Category">
-          </a>
-          <p><strong>Q1:</strong> Revenue is concentrated in a few categories despite similar unit volume.</p>
-        </div>
-        
-        <div class="chart-item">
-          <a href="charts/q3-orders-by-customer-type.png" target="_blank" rel="noopener">
-            <img src="charts/q3-orders-by-customer-type.png" alt="Q3: Orders by Customer Type">
-          </a>
-          <p><strong>Q3:</strong> Returning customers place ~6.2× more orders than single-purchase customers.</p>
-        </div>
-        
-        <div class="chart-item">
-          <a href="charts/q5-rating-by-delivery.png" target="_blank" rel="noopener">
-            <img src="charts/q5-rating-by-delivery.png" alt="Q5: Rating by Delivery Speed">
-          </a>
-          <p><strong>Q5:</strong> Delivery speed shows minimal relationship with customer ratings.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+<div class="kpis">
+
+<div class="kpi">
+<p class="label"><strong>Excel Analysis</strong></p>
+<p class="value">5 business questions</p>
+</div>
+
+<div class="kpi">
+<p class="label"><strong>Python Analysis</strong></p>
+<p class="value">5 business questions</p>
+</div>
+
+<div class="kpi">
+<p class="label"><strong>Last updated</strong></p>
+<p class="value">March 2026</p>
+</div>
+
+</div>
+
+<h3>Key Business Findings</h3>
+
+<ul>
+<li><strong>Revenue concentration:</strong> Revenue is concentrated in Electronics, Home &amp; Garden, and Sports.</li>
+
+<li><strong>Discounts:</strong> Discounts show little measurable impact on average order value.</li>
+
+<li><strong>Customer retention:</strong> Returning customers drive revenue primarily through higher purchase frequency.</li>
+
+<li><strong>Device usage:</strong> Mobile dominates order volume while desktop shows slightly higher average order value.</li>
+
+<li><strong>Delivery experience:</strong> Delivery speed shows minimal relationship with customer ratings.</li>
+</ul>
+
+<p class="note">
+Both tools produced consistent analytical conclusions.
+The primary differences emerged in workflow efficiency,
+automation potential, and long-term scalability.
+</p>
+
+<h3>Excel vs. Python: Workflow Comparison</h3>
+
+<ul class="highlights">
+
+<li>
+<strong>Speed for ad-hoc analysis:</strong>
+Excel Pivot Tables allow rapid aggregation and exploration with minimal setup,
+making them ideal for quick business questions.
+</li>
+
+<li>
+<strong>Automation and reproducibility:</strong>
+Python requires more setup but produces a fully reproducible workflow where
+data cleaning, aggregation, and visualization can be rerun automatically.
+</li>
+
+<li>
+<strong>Scalability:</strong>
+Excel performs well for moderate datasets but becomes cumbersome at scale.
+Python handles larger datasets and integrates naturally into automated pipelines.
+</li>
+
+<li>
+<strong>Visualization flexibility:</strong>
+Excel provides fast built-in charts, while Python libraries like Matplotlib
+offer deeper customization and programmatic control.
+</li>
+
+<li>
+<strong>Practical takeaway:</strong>
+Excel is ideal for exploratory analysis and stakeholder reporting,
+while Python is better suited for scalable analytical workflows
+and repeatable data pipelines.
+</li>
+
+</ul>
+
+<div class="actions">
+
+<a class="btn primary"
+href="2023-ecommerce-excel-analysis.pdf"
+target="_blank"
+rel="noopener">
+View Excel Write-Up (PDF)
+</a>
+
+<a class="btn primary"
+href="https://colab.research.google.com/drive/1sHEgO7XtZu9A7D-WdCp2Wm-4pKGXwJHq"
+target="_blank"
+rel="noopener">
+View Python Analysis (Google Colab)
+</a>
+
+<a class="btn"
+href="https://www.kaggle.com/datasets/umuttuygurr/e-commerce-customer-behavior-and-sales-analysis-tr"
+target="_blank"
+rel="noopener">
+Dataset (Kaggle)
+</a>
+
+</div>
+
+</section>
+
+
+<section class="status-card">
+
+<h2>Excel Analysis Highlights</h2>
+
+<p class="muted">
+Selected charts generated using Excel Pivot Tables.
+The full Excel analysis and interpretation is available in the linked PDF.
+</p>
+
+<div class="chart-grid">
+
+<div class="chart-item">
+<a href="charts/q1-revenue-vs-volume.png" target="_blank" rel="noopener">
+<img src="charts/q1-revenue-vs-volume.png" alt="Revenue vs Volume by Category">
+</a>
+
+<p>
+<strong>Revenue concentration:</strong>
+A small number of product categories account for a disproportionate
+share of total revenue.
+</p>
+</div>
+
+<div class="chart-item">
+<a href="charts/q3-orders-by-customer-type.png" target="_blank" rel="noopener">
+<img src="charts/q3-orders-by-customer-type.png" alt="Orders by Customer Type">
+</a>
+
+<p>
+<strong>Customer behavior:</strong>
+Returning customers place roughly 6× more orders than
+single-purchase customers.
+</p>
+</div>
+
+<div class="chart-item">
+<a href="charts/q5-rating-by-delivery.png" target="_blank" rel="noopener">
+<img src="charts/q5-rating-by-delivery.png" alt="Rating by Delivery Speed">
+</a>
+
+<p>
+<strong>Delivery experience:</strong>
+Faster delivery does not strongly correlate with higher customer ratings.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="status-card">
+
+<h2>Python (Pandas) Analysis Highlights</h2>
+
+<p class="muted">
+Selected charts generated using Pandas and Matplotlib.
+The full reproducible analysis is available in the linked notebook.
+</p>
+
+<div class="chart-grid">
+
+<div class="chart-item">
+<a href="charts/python-category-revenue.png" target="_blank" rel="noopener">
+<img src="charts/python-category-revenue.png" alt="Python Revenue by Category">
+</a>
+
+<p>
+<strong>Category revenue distribution:</strong>
+Pandas aggregation confirms that revenue concentration
+is driven by a small number of dominant product categories.
+</p>
+</div>
+
+<div class="chart-item">
+<a href="charts/python-device-orders.png" target="_blank" rel="noopener">
+<img src="charts/python-device-orders.png" alt="Python Orders by Device">
+</a>
+
+<p>
+<strong>Device trends:</strong>
+Mobile devices generate the majority of orders,
+while desktop users show slightly higher average order values.
+</p>
+</div>
+
+<div class="chart-item">
+<a href="charts/python-customer-type.png" target="_blank" rel="noopener">
+<img src="charts/python-customer-type.png" alt="Python Orders by Customer Type">
+</a>
+
+<p>
+<strong>Customer segmentation:</strong>
+Groupby analysis highlights the disproportionate contribution
+of returning customers to total purchase activity.
+</p>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
 </body>
 </html>
