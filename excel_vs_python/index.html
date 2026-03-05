@@ -191,38 +191,36 @@
   <section class="section">
     <span class="label">Workflow</span>
     <h2>Excel vs. Python</h2>
-
     <p>
-      I reproduced this entire analysis in Python using Pandas and Matplotlib.
-      Both approaches reached identical conclusions —
-      the differences that matter are in workflow, not results.
+      After completing this analysis using Excel Pivot Tables, 
+      I reproduced and validated those results in Python using Pandas and Matplotlib.
+      As expected, results were identical. Thus, the differences that matter are in workflow.
     </p>
 
     <div class="callout">
       For a clean, moderately-sized dataset like this one, Excel was the practical choice:
       faster to set up, easier to present, and no environment to configure.
-      Python's overhead wasn't justified at this scale —
-      but the tradeoffs reverse quickly as data volume, reproducibility requirements, or team size grow.
+      Python's overhead wasn't justified at this scale, but the tradeoffs reverse quickly 
+      as data volume, reproducibility requirements, or team size grow.
     </div>
 
     <table class="comparison-table" aria-label="Excel vs Python workflow comparison">
       <thead>
         <tr>
           <th>Dimension</th>
-          <th class="col-excel">Excel</th>
-          <th class="col-python">Python</th>
+          <th class="col-excel">Excel Pivot Tables</th>
+          <th class="col-python">Python (Pandas + Matplotlib)</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Ad-hoc speed</td>
           <td>
-            Fast setup, no environment needed. Pivot tables answer most aggregation
-            questions in under a minute.
+            Fast setup, no environment needed.
             <br><span class="badge badge-excel">Excel wins</span>
           </td>
           <td>
-            More setup per question. Not efficient for one-off exploration on clean, small data.
+            More setup per question. Less efficient for one-off exploration on clean, small data.
           </td>
         </tr>
         <tr>
@@ -238,21 +236,21 @@
         <tr>
           <td>Scalability</td>
           <td>
-            Performant here at ~14K rows. Degrades with larger volumes or complex transformations.
+            More than adequate for ~14K rows, but likely degrades with larger volumes or complex transformations.
+            <br><span class="badge badge-tie">Best for this specific use case</span>
           </td>
           <td>
-            Handles millions of rows comfortably. Integrates naturally into automated pipelines.
-            <br><span class="badge badge-python">Python wins</span>
+            Scales well and integrates naturally into automated pipelines.
           </td>
         </tr>
         <tr>
           <td>Visualization</td>
           <td>
-            Built-in charts are fast and presentation-ready. Limited for non-standard visuals.
+            Built-in charts are fast and presentation-ready, but limited for non-standard visuals.
+            <br><span class="badge badge-tie">Best for this specific use case</span>
           </td>
           <td>
-            Matplotlib and Seaborn offer complete control. More code required for simple charts.
-            <br><span class="badge badge-tie">Depends on use case</span>
+            Simple charts require significant code, but Matplotlib offers complete control.
           </td>
         </tr>
         <tr>
@@ -273,13 +271,13 @@
          href="2023-ecommerce-excel-analysis.pdf"
          target="_blank"
          rel="noopener">
-        Full Write-Up (PDF)
+        View Excel Write-Up (PDF)
       </a>
       <a class="btn"
          href="https://colab.research.google.com/drive/1sHEgO7XtZu9A7D-WdCp2Wm-4pKGXwJHq"
          target="_blank"
          rel="noopener">
-        Python Notebook (Colab)
+        View Python Analysis (Google Colab)
       </a>
       <a class="btn"
          href="https://www.kaggle.com/datasets/umuttuygurr/e-commerce-customer-behavior-and-sales-analysis-tr"
