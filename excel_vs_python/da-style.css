@@ -3,17 +3,21 @@
    - Change these once to update the whole page.
    ========================================================= */
 :root{
-  --bg: #f6f8fb;          /* page background */
-  --card: #ffffff;        /* card background */
-  --text: #1f2937;        /* primary text */
-  --muted: #6b7280;       /* secondary text */
-  --border: #e5e7eb;      /* borders/dividers */
+  --bg: #f4f6fb;
+  --card: #ffffff;
 
-  --brand: #1e3a8a;       /* primary blue */
-  --brand-2: #3b82f6;     /* accent blue */
+  --text: #111827;
+  --muted: #6b7280;
 
-  --shadow: 0 10px 25px rgba(0,0,0,.08);
-  --radius: 14px;
+  --border: #e6e8ef;
+
+  --brand: #2563eb;
+  --brand-2: #6366f1;
+
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --shadow-hover: 0 18px 45px rgba(0,0,0,.12);
+
+  --radius: 16px;
 }
 
 /* =========================================================
@@ -23,8 +27,18 @@
 
 body{
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.6;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Inter,
+    Arial,
+    sans-serif;
+
+  line-height: 1.65;
+
   background: var(--bg);
   color: var(--text);
 }
@@ -43,9 +57,13 @@ body{
    ========================================================= */
 header{
   text-align: center;
-  padding: 3.25rem 1rem 2.5rem;
+  padding: 4rem 1rem 3rem;
   color: #fff;
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.15), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(255,255,255,.12), transparent 40%),
+    linear-gradient(135deg, var(--brand), var(--brand-2));
 }
 
 header h1{
@@ -78,13 +96,18 @@ header p{
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 1.5rem;
-  transition: box-shadow .2s ease, transform .2s ease;
+  padding: 1.6rem;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
 }
 
 .status-card:hover{
-  box-shadow: 0 15px 35px rgba(0,0,0,.12);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: #d8dcef;
 }
 
 /* Headings inside cards */
@@ -135,25 +158,34 @@ header p{
 
 .btn{
   display: inline-block;
-  padding: .6rem .9rem;
+  padding: .65rem 1rem;
+
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: var(--card);
+
+  background: #fff;
   color: var(--brand);
-  text-decoration: none;
+
   font-weight: 600;
-  transition: box-shadow .2s ease, transform .2s ease;
+  font-size: .95rem;
+
+  text-decoration: none;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
 }
 
 .btn:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
 }
 
 .btn.primary{
-  background: var(--brand);
-  color: #fff;
-  border-color: transparent;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: white;
+  border: none;
 }
 
 /* =========================================================
@@ -232,23 +264,24 @@ code{
 .chart-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
 }
 
 .chart-item{
-  display: flex;
-  flex-direction: column;
+  background: #ffffff;
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: .75rem;
-  background: #f9fafb;
-  transition: transform .2s ease, box-shadow .2s ease;
+  border-radius: 14px;
+  padding: .85rem;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
 }
 
 .chart-item:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.10);
 }
 
 .chart-item a{
