@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="da-style.css">
 </head>
 
-<body>
+<body id="top">
 
 <!-- =====================================================
      HEADER
@@ -44,6 +44,9 @@
   </div>
 </header>
 
+<main>
+<div class="container">
+
   <!-- ===================================================
        SECTION 1 — OVERVIEW
        =================================================== -->
@@ -61,6 +64,9 @@
       Long-term growth should prioritize repeat purchasing behavior over short-term tactical optimizations
       like blanket discounting or delivery speed improvements.
     </div>
+
+  </section><!-- /.section overview -->
+
 
   <!-- ===================================================
        SECTION 2 — FIVE BUSINESS QUESTIONS (ACCORDION)
@@ -172,13 +178,15 @@
         </summary>
         <div class="q-body">
           <p>
-            Device type shows a clear relationship with purchasing behavior but only a modest impact on order value. Mobile devices
-            account for the majority of orders, while Desktop orders have an average order value approximately <span class="stat">$61 higher</span> than
-            Mobile orders. Tablet usage remains relatively low across both order volume and value.
+            Device type shows a clear relationship with purchasing behavior but only a modest impact on order value.
+            Mobile devices account for the majority of orders, while Desktop orders have an average order value
+            approximately <span class="stat">$61 higher</span> than Mobile orders.
+            Tablet usage remains relatively low across both order volume and value.
           </p>
           <p>
-            Overall, these results suggest that device choice primarily influences purchasing frequency rather than spend per transaction,
-            with Mobile devices serving as the dominant channel for engagement and Desktop devices providing a small advantage in per-order value.
+            Overall, these results suggest that device choice primarily influences purchasing frequency rather
+            than spend per transaction, with Mobile devices serving as the dominant channel for engagement
+            and Desktop devices providing a small advantage in per-order value.
           </p>
           <a class="q-chart" href="charts/q4-device-behavior.png" target="_blank" rel="noopener">
             <figure>
@@ -301,24 +309,7 @@
     </table>
 
     <div class="actions">
-      <a class="btn primary"
-         href="2023-ecommerce-excel-analysis.pdf"
-         target="_blank"
-         rel="noopener">
-        View Excel Write-Up (PDF)
-      </a>
-      <a class="btn primary"
-         href="https://colab.research.google.com/drive/1sHEgO7XtZu9A7D-WdCp2Wm-4pKGXwJHq"
-         target="_blank"
-         rel="noopener">
-        View Python Analysis (Google Colab)
-      </a>
-      <a class="btn"
-         href="https://www.kaggle.com/datasets/umuttuygurr/e-commerce-customer-behavior-and-sales-analysis-tr"
-         target="_blank"
-         rel="noopener">
-        Dataset (Kaggle)
-      </a>
+      <a class="btn" href="#top">↑ Back to Top</a>
     </div>
 
   </section><!-- /.section workflow -->
