@@ -1,322 +1,550 @@
-/* =========================================================
-   THEME (Design tokens)
-   - Change these once to update the whole page.
-   ========================================================= */
-:root{
-  --bg: #f4f6fb;
-  --card: #ffffff;
+/* ============================================================
+   GOOGLE FONTS
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
-  --text: #111827;
-  --muted: #6b7280;
 
-  --border: #e6e8ef;
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
 
-  --brand: #2563eb;
-  --brand-2: #6366f1;
+  /* --- Color palette --- */
+  --bg:         #f2ede6;        /* warm parchment base */
+  --surface:    #faf8f4;        /* card / section surface */
+  --surface-2:  #ede8e0;        /* alternate row, hover state */
 
-  --shadow: 0 10px 30px rgba(0,0,0,.08);
-  --shadow-hover: 0 18px 45px rgba(0,0,0,.12);
+  --ink:        #1c1a17;        /* primary text — near black, warm */
+  --muted:      #6b6457;        /* secondary text, captions */
+  --faint:      #d9d2c7;        /* borders, dividers */
 
-  --radius: 16px;
+  --gold:       #a0732a;        /* primary accent */
+  --gold-light: #f0e4cc;        /* tinted background for callouts */
+  --gold-rule:  #c9a05a;        /* decorative lines */
+
+  --excel:      #1e6b3c;        /* Excel label accent */
+  --python:     #2b5797;        /* Python label accent */
+
+  /* --- Typography --- */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-prose:   'Lora', Georgia, serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+  /* --- Layout --- */
+  --max-width: 800px;
+  --gap: clamp(1.5rem, 4vw, 2.5rem);
+
+  /* --- Transitions --- */
+  --ease: 0.2s ease;
 }
 
-/* =========================================================
-   BASE / RESET
-   ========================================================= */
-*{ box-sizing: border-box; }
 
-body{
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
-
-  font-family:
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Inter,
-    Arial,
-    sans-serif;
-
-  line-height: 1.65;
-
-  background: var(--bg);
-  color: var(--text);
+  padding: 0;
 }
 
-/* Keyboard focus ring (accessibility) */
-*:focus-visible{
-  outline: 2px solid var(--brand-2);
-  outline-offset: 2px;
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-/* Small helper */
-.muted{ color: var(--muted); }
-
-/* =========================================================
-   HERO HEADER
-   ========================================================= */
-header{
-  text-align: center;
-  padding: 4rem 1rem 3rem;
-  color: #fff;
-
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,.15), transparent 40%),
-    radial-gradient(circle at 80% 0%, rgba(255,255,255,.12), transparent 40%),
-    linear-gradient(135deg, var(--brand), var(--brand-2));
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-prose);
+  font-size: 1rem;
+  line-height: 1.75;
+  min-height: 100vh;
 }
 
-header h1{
-  margin: 0 0 .5rem;
-  font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
-  letter-spacing: -0.02em;
+/* Accessible focus ring */
+*:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
 }
 
-header p{
-  margin: 0 auto;
-  max-width: 68ch;
-  font-size: clamp(1rem, .6vw + .9rem, 1.25rem);
-  opacity: .95;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* =========================================================
-   LAYOUT CONTAINER
-   ========================================================= */
-.container{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 2rem 1rem 3rem;
+a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity var(--ease);
 }
 
-/* =========================================================
-   CARDS (your main content blocks)
-   ========================================================= */
-.status-card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.6rem;
+a:hover { opacity: 0.75; }
 
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease;
+
+/* ============================================================
+   TYPOGRAPHY HELPERS
+   ============================================================ */
+
+/* Eyebrow label above section headings */
+.label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
 }
 
-.status-card:hover{
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-  border-color: #d8dcef;
+/* De-emphasized metadata */
+.muted {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
 }
 
-/* Headings inside cards */
-.status-card h2{
-  margin: 0 0 .75rem;
-  font-size: 1.35rem;
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
   letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--ink);
 }
 
-.status-card h3{
-  margin: 1.25rem 0 .5rem;
-  font-size: 1.1rem;
-  color: #111827;
+p {
+  margin-bottom: 1rem;
 }
 
-/* Text + lists inside cards */
-.status-card p{ margin: .5rem 0; }
-
-.status-card ul{
-  margin: .5rem 0 0;
-  padding-left: 1.2rem;
+p:last-child {
+  margin-bottom: 0;
 }
 
-.status-card li{
-  margin: .35rem 0;
-  color: #374151;
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gap);
 }
 
-/* Callout note (blue stripe box) */
-.note{
-  margin-top: 1.25rem;
-  padding: .75rem 1rem;
-  border-left: 4px solid var(--brand);
-  background: #dbeafe;
-  color: var(--brand);
-  border-radius: 10px;
+
+/* ============================================================
+   HEADER
+   A typographically-led masthead. No gradient, no hero image —
+   just confident type on the warm background, anchored by a
+   thick bottom rule.
+   ============================================================ */
+header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 5.5rem) var(--gap) clamp(2rem, 5vw, 3rem);
+  border-bottom: 2px solid var(--ink);
 }
 
-/* =========================================================
-   BUTTONS / ACTIONS
-   ========================================================= */
-.actions{
+.header-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+}
+
+/* The italic word in the headline */
+header h1 em {
+  font-family: var(--font-prose);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+}
+
+.header-deck {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 52ch;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+/* Small metadata row beneath the deck */
+.header-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: .75rem;
-  margin-top: 1rem;
+  gap: 0.4rem 2rem;
 }
 
-.btn{
-  display: inline-block;
-  padding: .65rem 1rem;
-
-  border-radius: 999px;
-  border: 1px solid var(--border);
-
-  background: #fff;
-  color: var(--brand);
-
-  font-weight: 600;
-  font-size: .95rem;
-
-  text-decoration: none;
-
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease,
-    background .2s ease;
-}
-
-.btn:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.12);
-}
-
-.btn.primary{
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
-  color: white;
-  border: none;
-}
-
-/* =========================================================
-   KPI ROW (small stats blocks)
-   ========================================================= */
-.kpis{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: .75rem;
-  margin-top: 1rem;
-}
-
-.kpi{
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: .75rem 1rem;
-  background: #f9fafb;
-}
-
-.kpi .label{
-  margin: 0;
+.header-meta .meta-item {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   color: var(--muted);
-  font-size: .85rem;
+  letter-spacing: 0.04em;
 }
 
-.kpi .value{
-  margin: .15rem 0 0;
-  font-weight: 700;
-  font-size: 1.1rem;
+.header-meta .meta-item strong {
+  color: var(--ink);
+  font-weight: 500;
 }
 
-/* Inline code pills (pandas/matplotlib) */
-code{
-  background: #eef2ff;
-  padding: .1rem .35rem;
-  border-radius: 6px;
-  font-size: .95em;
+
+/* ============================================================
+   MAIN & SECTIONS
+   Each thematic block separated by a hairline rule.
+   ============================================================ */
+main {
+  padding-bottom: clamp(3rem, 8vw, 6rem);
 }
 
-/* =========================================================
-   HIGHLIGHTS STYLES
-   ========================================================= */
-.highlights{
-  margin: .75rem 0 0;
-  padding-left: 1.2rem;
+.section {
+  border-bottom: 1px solid var(--faint);
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
 }
 
-.highlights li{
-  margin: .6rem 0;
-  color: #374151;
+.section:last-child {
+  border-bottom: none;
 }
 
-.highlights a{
-  margin-left: .5rem;
+.section h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  margin-bottom: 0.75rem;
+}
+
+.section > p {
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* ============================================================
+   CALLOUT BOX
+   Gold left-border, tinted background.
+   Used for editorial asides and key observations.
+   ============================================================ */
+.callout {
+  border-left: 3px solid var(--gold-rule);
+  background: var(--gold-light);
+  padding: 1rem 1.4rem;
+  font-family: var(--font-prose);
+  font-style: italic;
+  font-size: 0.93rem;
+  color: var(--ink);
+  line-height: 1.65;
+  margin: 1.75rem 0;
+}
+
+
+/* ============================================================
+   ACCORDION — Five Business Questions
+   Built on native <details>/<summary> — no JS required.
+
+   Structure:
+     <details class="...">
+       <summary>
+         <span class="q-num">Q 01</span>
+         <span class="q-title">Question text</span>
+         <span class="q-toggle">+</span>
+       </summary>
+       <div class="q-body"> ... </div>
+     </details>
+   ============================================================ */
+.accordion {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--faint);
+}
+
+.accordion details {
+  border-bottom: 1px solid var(--faint);
+}
+
+/* Clickable summary row */
+.accordion details summary {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  cursor: pointer;
+  list-style: none;
+  -webkit-appearance: none;
+  transition: background var(--ease);
+}
+
+/* Remove browser default disclosure triangle */
+.accordion details summary::-webkit-details-marker { display: none; }
+
+/* Question number — e.g. "Q 01" */
+.accordion .q-num {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  flex-shrink: 0;
+  padding-top: 0.1em;
+}
+
+/* Question heading text */
+.accordion .q-title {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 600;
-  color: var(--brand);
-  text-decoration: none;
+  color: var(--ink);
+  flex: 1;
+  line-height: 1.3;
 }
 
-.highlights a:hover{
-  text-decoration: underline;
+/* +/− toggle on the right */
+.accordion .q-toggle {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: transform var(--ease), color var(--ease);
+  user-select: none;
+  line-height: 1;
 }
 
-.status-card + .status-card{
-  margin-top: 1.25rem;
+/* When open: rotate + into ×, highlight gold */
+.accordion details[open] summary .q-toggle {
+  transform: rotate(45deg);
+  color: var(--gold);
 }
 
-/* Small-screen card padding */
-@media (max-width: 520px){
-  .status-card{ padding: 1.2rem; }
+/* Open state: gold left border accent */
+.accordion details[open] {
+  border-left: 3px solid var(--gold-rule);
+  padding-left: 1.1rem;
+  margin-left: -1.1rem;
 }
 
-/* =========================================================
-   CHART GRID (thumbnail gallery)
-   ========================================================= */
-.chart-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.2rem;
+/* Expanded content */
+.accordion .q-body {
+  padding: 0.25rem 0 1.6rem 2.3rem;
+  animation: accordionOpen 0.22s ease both;
 }
 
-.chart-item{
-  background: #ffffff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: .85rem;
-
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease;
+@keyframes accordionOpen {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.chart-item:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(0,0,0,.10);
+.accordion .q-body p {
+  font-size: 0.95rem;
+  color: var(--ink);
+  max-width: 60ch;
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
 }
 
-.chart-item a{
+/* Inline stat pill — highlight a specific number */
+.accordion .stat {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: var(--gold-light);
+  color: var(--gold);
+  padding: 0.15em 0.55em;
+  border-radius: 3px;
+}
+
+/* Chart thumbnail inside an accordion item */
+.accordion .q-chart {
   display: block;
-  margin-bottom: 1rem;  /* This adds the padding between image and text */
-  border-radius: 8px;
+  margin-top: 1.25rem;
+  border: 1px solid var(--faint);
   overflow: hidden;
-  border: 1px solid var(--border);
+  max-width: 460px;
+  text-decoration: none;
+  transition: border-color var(--ease);
 }
 
-.chart-item img{
+.accordion .q-chart:hover {
+  border-color: var(--gold-rule);
+  opacity: 1;
+}
+
+.accordion .q-chart img {
   width: 100%;
   height: auto;
   display: block;
-  transition: opacity .2s ease;
+  transition: transform 0.28s ease;
 }
 
-.chart-item a:hover img{
-  opacity: .85;
+.accordion .q-chart:hover img {
+  transform: scale(1.015);
 }
 
-.chart-item p{
-  margin: auto 0 0;  /* This pushes the text to the bottom */
-  font-size: .95rem;
-  line-height: 1.5;
-  color: #374151;
+.accordion .q-chart figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--muted);
+  padding: 0.45rem 0.75rem;
+  background: var(--surface-2);
+  letter-spacing: 0.04em;
 }
 
-.chart-item strong{
-  color: var(--brand);
+
+/* ============================================================
+   TOOL COMPARISON TABLE
+   Deliberately restrained — type and rules only.
+   No rounded corners, no box shadows.
+   ============================================================ */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+  font-size: 0.875rem;
 }
 
-/* Responsive: single column on small screens */
-@media (max-width: 520px){
-  .chart-grid{
-    grid-template-columns: 1fr;
+.comparison-table thead th {
+  text-align: left;
+  padding: 0.6rem 1rem 0.6rem 0;
+  border-bottom: 2px solid var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.comparison-table thead th.col-excel  { color: var(--excel); }
+.comparison-table thead th.col-python { color: var(--python); }
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid var(--faint);
+  transition: background var(--ease);
+}
+
+.comparison-table tbody tr:hover {
+  background: var(--surface-2);
+}
+
+.comparison-table td {
+  padding: 0.9rem 1rem 0.9rem 0;
+  vertical-align: top;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* Row label */
+.comparison-table td:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  width: 26%;
+  padding-right: 1.5rem;
+}
+
+/* Winner badges */
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.18em 0.55em;
+  border-radius: 2px;
+  margin-top: 0.45rem;
+}
+
+.badge-excel  { background: #d4edda; color: var(--excel); }
+.badge-python { background: #dce8f7; color: var(--python); }
+.badge-tie    { background: var(--surface-2); color: var(--muted); }
+
+
+/* ============================================================
+   BUTTONS
+   Flat, monospace-labeled, ink-bordered.
+   ============================================================ */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.65rem 1.3rem;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  transition: background var(--ease), color var(--ease), border-color var(--ease);
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: var(--bg);
+  opacity: 1;
+}
+
+.btn.primary {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.btn.primary:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+
+/* ============================================================
+   PAGE LOAD ANIMATION
+   Sections fade up once on load, staggered.
+   Skipped entirely for users who prefer reduced motion.
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+  header                { animation: fadeUp 0.45s ease both; }
+  .section:nth-child(1) { animation: fadeUp 0.45s 0.08s ease both; }
+  .section:nth-child(2) { animation: fadeUp 0.45s 0.14s ease both; }
+  .section:nth-child(3) { animation: fadeUp 0.45s 0.20s ease both; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 600px) {
+  /* Allow table to scroll horizontally on small screens */
+  .comparison-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  /* Remove the indent-based left accent on mobile to avoid overflow */
+  .accordion details[open] {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+    border-bottom: 2px solid var(--gold-rule);
   }
 }
