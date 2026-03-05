@@ -79,16 +79,16 @@
             The data reveals a clear split between high-value categories that drive revenue efficiency
             and lower-value categories that rely on volume without a proportional return.
           </p>
-          <a class="q-chart" href="charts/q1-revenue-vs-volume.png" target="_blank" rel="noopener">
-            <figure>
-              <img src="charts/q1-revenue-vs-volume.png" alt="Bar chart showing total revenue and order volume by product category">
-              <figcaption>Total Revenue and Volume by Product Category (2023) — click to enlarge</figcaption>
-            </figure>
-          </a>
           <a class="q-chart" href="charts/q1-pie-category-revenue.png" target="_blank" rel="noopener">
             <figure>
               <img src="charts/q1-pie-category-revenue.png" alt="Pie chart showing total revenue by product category">
               <figcaption>Percent Revenue by Product Category (2023) — click to enlarge</figcaption>
+            </figure>
+          </a>
+          <a class="q-chart" href="charts/q1-revenue-vs-volume.png" target="_blank" rel="noopener">
+            <figure>
+              <img src="charts/q1-revenue-vs-volume.png" alt="Bar chart showing total revenue and order volume by product category">
+              <figcaption>Total Revenue and Volume by Product Category (2023) — click to enlarge</figcaption>
             </figure>
           </a>
         </div>
@@ -226,7 +226,7 @@
       <thead>
         <tr>
           <th>Dimension</th>
-          <th class="col-excel">Excel Pivot Tables</th>
+          <th class="col-excel">Excel (Pivot Tables)</th>
           <th class="col-python">Python (Pandas + Matplotlib)</th>
         </tr>
       </thead>
@@ -238,33 +238,33 @@
             <br><span class="badge badge-excel">Excel wins</span>
           </td>
           <td>
-            More setup per question. Less efficient for one-off exploration on clean, small data.
+            Less efficient for one-off exploration on small, clean datasets.
           </td>
         </tr>
         <tr>
           <td>Reproducibility</td>
           <td>
-            Steps are manual and not auditable. Risky for anything repeated or handed off.
+            Steps are manual and less auditable. Risky for anything repeated or handed off.
           </td>
           <td>
-            Every transformation is explicit in code. Methodology is documented by default.
+            Methodology is documented by default in code.
             <br><span class="badge badge-python">Python wins</span>
           </td>
         </tr>
         <tr>
           <td>Scalability</td>
           <td>
-            More than adequate for ~14K rows, but likely degrades with larger volumes or complex transformations.
+            More than adequate for ~14K rows.
             <br><span class="badge badge-tie">Best for this specific use case</span>
           </td>
           <td>
-            Scales well and integrates naturally into automated pipelines.
+            Offers superior scalability and integrates naturally into automated pipelines.
           </td>
         </tr>
         <tr>
           <td>Visualization</td>
           <td>
-            Built-in charts are fast and presentation-ready, but limited for non-standard visuals.
+            Built-in charts are fast and presentation-ready for standard visuals.
             <br><span class="badge badge-tie">Best for this specific use case</span>
           </td>
           <td>
@@ -274,11 +274,11 @@
         <tr>
           <td>Collaboration</td>
           <td>
-            Familiar to most stakeholders. Easy to share without technical setup.
+            Familiar to most stakeholders and easy to share without technical setup.
             <br><span class="badge badge-excel">Excel wins</span>
           </td>
           <td>
-            Better for technical teams. Version-controllable via Git.
+            Better for technical teams requiring version-control via Git.
           </td>
         </tr>
       </tbody>
